@@ -54,7 +54,8 @@
 .collage__beach { left: 0; top: 0; width: 100cqw; height: 66.667cqw; }
 .collage__couple { left: 49.5cqw; top: 63.333cqw; width: 43.333cqw; height: 65cqw; z-index: 1; }
 .collage__teens { left: 0; top: 155cqw; width: 100cqw; height: 66.667cqw; }
-.collage__boys { left: 57.167cqw; top: 128.333cqw; width: 14.5cqw; height: 21.75cqw; z-index: 2; }
+/* The boys sit just right of the girls' white frame, so the frame meets their photo's edge without covering anyone. */
+.collage__boys { left: 60.833cqw; top: 128.333cqw; width: 14.5cqw; height: 21.75cqw; z-index: 2; }
 .collage__girls { left: 44.167cqw; top: 115.583cqw; width: 15.833cqw; height: 23.75cqw; z-index: 3; }
 
 .collage__bio { position: absolute; left: 7cqw; top: 74.333cqw; width: 35cqw; text-align: center; }
