@@ -60,6 +60,29 @@ jobs:
             set net:max-retries 3;
             set net:timeout 30;
             open --env-password -u '$SFTP_USER' sftp://$SFTP_HOST;
-            mirror -R --ignore-time --parallel=6 dist/_astro public_html/_astro;
-            mirror -R --parallel=4 --exclude _astro/ dist public_html;
+            mirror -R --verbose=1 --ignore-time --parallel=6 dist/_astro public_html/_astro;
+            mirror -R --verbose=1 --parallel=4 --exclude _astro/ dist public_html;
           "
+
+      # Reads the site back from the server and compares it with what was just built,
+      # so a run only shows green when the live files really match.
+      - name: Check the upload
+        if: ${{ env.SFTP_HOST != '' }}
+        run: |
+          mkdir -p /tmp/live
+          lftp -c "
+            set cmd:fail-exit yes;
+            set sftp:auto-confirm yes;
+            open --env-password -u '$SFTP_USER' sftp://$SFTP_HOST;
+            get public_html/index.html -o /tmp/live/index.html;
+            get public_html/about/index.html -o /tmp/live/about.html;
+            get public_html/contact/index.html -o /tmp/live/contact.html;
+            cls -1 public_html/_astro > /tmp/live/astro.txt;
+          "
+          cmp dist/index.html /tmp/live/index.html
+          cmp dist/about/index.html /tmp/live/about.html
+          cmp dist/contact/index.html /tmp/live/contact.html
+          missing=$(comm -23 <(ls dist/_astro | sort) <(sed 's#.*/##' /tmp/live/astro.txt | sort))
+          echo "Files in _astro on the server: $(wc -l < /tmp/live/astro.txt). Built files: $(ls dist/_astro | wc -l)."
+          if [ -n "$missing" ]; then echo "::error::Missing on the server:"; echo "$missing"; exit 1; fi
+          echo "The live pages match this build and every image, font and style file is on the server."
