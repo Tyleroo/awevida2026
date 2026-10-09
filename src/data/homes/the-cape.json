@@ -1,0 +1,162 @@
+{
+  "title": "The Cape",
+  "location": "Daniel Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/ce8366cf197056e49abf62c5ec32a244.jpg",
+    "alt": "The Cape living room, with a shiplap fireplace surround and a painting above the mantel"
+  },
+  "portfolio": {
+    "order": 2,
+    "image": "/src/assets/photos/ea64f498a99af4400771cded6814a319.jpg"
+  },
+  "slider": {
+    "show": true,
+    "order": 4,
+    "image": "/src/assets/photos/ce8366cf197056e49abf62c5ec32a244.jpg",
+    "label": "Daniel Island"
+  },
+  "rowGap": 40,
+  "rows": [
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/8ba7fc724b78c237f665425a0cf9567a.jpg",
+          "alt": "Front entry with glass doors and a driftwood bench"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/2c42cb859d8914d39f71b68cd4197705.jpg",
+          "alt": "Screened porch with a white sectional"
+        },
+        {
+          "image": "/src/assets/photos/ea64f498a99af4400771cded6814a319.jpg",
+          "alt": "Backyard pool"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/b19530416901f1403a38b66615896d11.jpg",
+          "alt": "Aerial view of the backyard and pool"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/a54a0080caa5ed1f94629ce3266339d0.jpg",
+          "alt": "Sitting room with striped chairs and a boat painting"
+        },
+        {
+          "image": "/src/assets/photos/3c86c29958fcf840069f0c3b31891815.jpg",
+          "alt": "Upstairs hallway with a rope-hung bed swing"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/6ffd6a57146ce887653c4b0f810587a9.jpg",
+          "alt": "Home office with blue-gray built-ins and a wood ceiling"
+        },
+        {
+          "image": "/src/assets/photos/e01f59ab88763d5ca29772adbc22cc9c.jpg",
+          "alt": "Window-seat reading nook"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/3765ddab70c6bdbaac683104f20c5025.jpg",
+          "alt": "Kitchen, wide view"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/4adf3172b9e7c38e0cb1280e2dcb1575.jpg",
+          "alt": "Dining area with a cluster of paper-lantern pendants, open to the kitchen"
+        },
+        {
+          "image": "/src/assets/photos/6494cf4083ad9216e6a3561ef7c6e0fc.jpg",
+          "alt": "Kitchen island with six counter stools"
+        },
+        {
+          "image": "/src/assets/photos/5a4d6489cc535a51a1f98a4a293e13c5.jpg",
+          "alt": "Breakfast nook with a round table"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/cd013b8fc941a8a8d5638a9fcb8d1894.jpg",
+          "alt": "Butler's pantry and wet bar"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/fff8714bd99c806cf9a05b062d0c5b19.jpg",
+          "alt": "Primary bedroom with a vaulted shiplap ceiling"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/ff69d083b7adaba5823e63df2d53f5bf.jpg",
+          "alt": "Bedroom with pink sunburst closet doors"
+        },
+        {
+          "image": "/src/assets/photos/408da4f96811a7bd5399f3708ac160dc.jpg",
+          "alt": "Walk-in closet with an island and a window seat"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/c8742de008e1f59c1aa39d6ba408a435.jpg",
+          "alt": "Kids bedroom with a built-in storage bed"
+        },
+        {
+          "image": "/src/assets/photos/2bf1baa269601b4defc53d901e04b9da.jpg",
+          "alt": "Second kids room with bean-bag chairs"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/d8220a3b0e135efc2598e2ab449b45a2.jpg",
+          "alt": "Bathroom with a navy vanity and penny tile"
+        },
+        {
+          "image": "/src/assets/photos/85e848698b9b41518409deb5c739d267.jpg",
+          "alt": "Powder bathroom with leaf-print wallpaper"
+        }
+      ]
+    }
+  ]
+}

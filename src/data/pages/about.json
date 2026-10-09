@@ -1,0 +1,77 @@
+{
+  "title": "About Gabi",
+  "intro": "Fifteen years ago, as a side business and to fulfill an incurable itch for expressing her creativity through exciting house projects, Gabi got into residential real estate.",
+  "band": [
+    {
+      "image": "/src/assets/photos/6f06d9c2566615304e0a9787ae7b956e.jpg",
+      "alt": "Dalton, the pool with white loungers and cream umbrellas under the trees",
+      "position": "50% 70%"
+    },
+    {
+      "image": "/src/assets/photos/ea64f498a99af4400771cded6814a319.jpg",
+      "alt": "The Cape, the backyard pool and lawn",
+      "position": ""
+    },
+    {
+      "image": "/src/assets/photos/eaf19457732b00a383f07d6117af542f.jpg",
+      "alt": "Bali, a covered porch with a white sectional and round side tables",
+      "position": ""
+    },
+    {
+      "image": "/src/assets/photos/49dca0652fd83c7217b9d1d77104f837.jpg",
+      "alt": "Dalton, the white house with double porches and palmettos across the backyard pool",
+      "position": "50% 80%"
+    },
+    {
+      "image": "/src/assets/photos/b8af8bf0c805f1da70c68cbecdc31e72.jpg",
+      "alt": "The Cove, primary bedroom with a brass four-poster canopy bed",
+      "position": ""
+    },
+    {
+      "image": "/src/assets/photos/3f2249d21e6abd25ca2b563a0f509f12.jpg",
+      "alt": "Color, the backyard pool and outdoor kitchen lit up at dusk",
+      "position": ""
+    },
+    {
+      "image": "/src/assets/photos/e29149bdac4ee740e7cc312bf7f5e71e.jpg",
+      "alt": "Dalton, loungers and umbrellas along the pool deck beside the carriage house",
+      "position": "50% 70%"
+    },
+    {
+      "image": "/src/assets/photos/fff8714bd99c806cf9a05b062d0c5b19.jpg",
+      "alt": "The Cape, primary bedroom with a vaulted beamed ceiling",
+      "position": ""
+    }
+  ],
+  "brings": {
+    "heading": "What she brings to every house",
+    "text": "Gabi brings a sense of awe to every project — she treats each home as though she's building the one of her own dreams."
+  },
+  "family": {
+    "eyebrow": "Meet Gabi",
+    "paragraphs": [
+      "Gabi Dalnekoff is a Brazilian-born business woman with a drive for living a multifaceted life. She has excelled in the corporate world, often building entirely new companies from the ground up. Real estate began as a side business — and she's been buying, renovating and upgrading her portfolio ever since, crediting it with the freedom to make her own schedule and live life on her terms.",
+      "She splits her time between Charleston, SC, and Highlands, NC, and is passionate about fitness and wellness. An accomplished tennis player, she competed internationally representing Brazil — and today, in addition to hitting tennis balls, she's a certified yoga and meditation instructor, guiding others through balancing physical, mental and daily challenges."
+    ],
+    "wide1": {
+      "image": "/src/assets/photos/ebb94b8665d21274ca416d46cc4e15e1.jpg",
+      "alt": "Gabi's family gathered on the beach under a floral arch at a wedding"
+    },
+    "tall": {
+      "image": "/src/assets/photos/001e65b8b3e4350c866416108740124d.jpg",
+      "alt": "Gabi and her husband Jason, embracing under a floral wedding arch on the beach"
+    },
+    "small1": {
+      "image": "/src/assets/photos/d9f7ddb52e7905c193509dcd92992a96.jpg",
+      "alt": "Three young women in blush dresses at the wedding"
+    },
+    "small2": {
+      "image": "/src/assets/photos/f726374f8d4cd4d00601202019d8131f.jpg",
+      "alt": "Four young men in white shirts at the wedding"
+    },
+    "wide2": {
+      "image": "/src/assets/photos/15da1695dfbb0c4155cd3d70e9534b12.jpg",
+      "alt": "Seven teens and young adults together at the wedding"
+    }
+  }
+}

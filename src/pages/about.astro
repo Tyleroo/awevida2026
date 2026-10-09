@@ -1,35 +1,33 @@
 ---
+// About Gabi. Wording and photos are in src/data/pages/about.json.
 import Base from '../layouts/Base.astro';
 import GalleryHero from '../components/GalleryHero.astro';
 import Photo from '../components/Photo.astro';
+import page from '../data/pages/about.json';
+import { hasPhoto } from '../lib/photos';
 
-// The rotating band. `position` nudges which slice of a photo shows: the Dalton pool sits low in its pictures.
-const slides = [
-  { id: '6f06d9c2566615304e0a9787ae7b956e', alt: 'Dalton, the pool with white loungers and cream umbrellas under the trees', position: '50% 70%' },
-  { id: 'ea64f498a99af4400771cded6814a319', alt: 'The Cape, the backyard pool and lawn' },
-  { id: 'eaf19457732b00a383f07d6117af542f', alt: 'Bali, a covered porch with a white sectional and round side tables' },
-  { id: '49dca0652fd83c7217b9d1d77104f837', alt: 'Dalton, the white house with double porches and palmettos across the backyard pool', position: '50% 80%' },
-  { id: 'b8af8bf0c805f1da70c68cbecdc31e72', alt: 'The Cove, primary bedroom with a brass four-poster canopy bed' },
-  { id: '3f2249d21e6abd25ca2b563a0f509f12', alt: 'Color, the backyard pool and outdoor kitchen lit up at dusk' },
-  { id: 'e29149bdac4ee740e7cc312bf7f5e71e', alt: 'Dalton, loungers and umbrellas along the pool deck beside the carriage house', position: '50% 70%' },
-  { id: 'fff8714bd99c806cf9a05b062d0c5b19', alt: 'The Cape, primary bedroom with a vaulted beamed ceiling' },
-];
+// The rotating band. `position` nudges which slice of a photo shows (for example "50% 70%" favours the lower part).
+const slides = (page.band ?? [])
+  .filter((p) => hasPhoto(p?.image))
+  .map((p) => ({ id: p.image, alt: p.alt, position: p.position || undefined }));
+const family = page.family ?? {};
+const paragraphs = (family.paragraphs ?? []).filter((text) => text && text.trim());
 ---
 
-<Base title="About Gabi" current="/about/" shareImage="ea64f498a99af4400771cded6814a319">
+<Base title={page.title} current="/about/" shareImage={slides[1]?.id ?? slides[0]?.id}>
   <section class="about-intro">
     <div class="about-intro__inner">
-      <h1>About Gabi</h1>
-      <p>Fifteen years ago, as a side business and to fulfill an incurable itch for expressing her creativity through exciting house projects, Gabi got into residential real estate.</p>
+      <h1>{page.title}</h1>
+      <p>{page.intro}</p>
     </div>
   </section>
 
-  <GalleryHero slides={slides} interval={6500} label="Photographs of finished homes" />
+  {slides.length > 0 && <GalleryHero slides={slides} interval={6500} label="Photographs of finished homes" />}
 
   <section class="about-brings">
     <div class="about-brings__inner">
-      <h2>What she brings to every house</h2>
-      <p>Gabi brings a sense of awe to every project — she treats each home as though she's building the one of her own dreams.</p>
+      <h2>{page.brings?.heading}</h2>
+      <p>{page.brings?.text}</p>
     </div>
   </section>
 
@@ -37,29 +35,28 @@ const slides = [
     <div class="collage">
       <div class="collage__board">
         <div class="collage__piece collage__beach">
-          <Photo id="ebb94b8665d21274ca416d46cc4e15e1" alt="Gabi's family gathered on the beach under a floral arch at a wedding" sizes="(max-width: 1300px) 100vw, 1200px" class="av-fill" />
+          <Photo id={family.wide1?.image} alt={family.wide1?.alt} sizes="(max-width: 1300px) 100vw, 1200px" class="av-fill" />
         </div>
 
         <div class="collage__bio">
-          <p class="collage__eyebrow">Meet Gabi</p>
-          <p>Gabi Dalnekoff is a Brazilian-born business woman with a drive for living a multifaceted life. She has excelled in the corporate world, often building entirely new companies from the ground up. Real estate began as a side business — and she's been buying, renovating and upgrading her portfolio ever since, crediting it with the freedom to make her own schedule and live life on her terms.</p>
-          <p>She splits her time between Charleston, SC, and Highlands, NC, and is passionate about fitness and wellness. An accomplished tennis player, she competed internationally representing Brazil — and today, in addition to hitting tennis balls, she's a certified yoga and meditation instructor, guiding others through balancing physical, mental and daily challenges.</p>
+          <p class="collage__eyebrow">{family.eyebrow}</p>
+          {paragraphs.map((text) => <p>{text}</p>)}
         </div>
 
         <div class="collage__piece collage__piece--framed collage__couple">
-          <Photo id="001e65b8b3e4350c866416108740124d" alt="Gabi and her husband Jason, embracing under a floral wedding arch on the beach" sizes="(max-width: 1099px) 520px, 520px" max={1200} class="av-fill" />
+          <Photo id={family.tall?.image} alt={family.tall?.alt} sizes="(max-width: 1099px) 520px, 520px" max={1200} class="av-fill" />
         </div>
 
         <div class="collage__piece collage__teens">
-          <Photo id="15da1695dfbb0c4155cd3d70e9534b12" alt="Seven teens and young adults together at the wedding" sizes="(max-width: 1300px) 100vw, 1200px" class="av-fill" />
+          <Photo id={family.wide2?.image} alt={family.wide2?.alt} sizes="(max-width: 1300px) 100vw, 1200px" class="av-fill" />
         </div>
 
         <div class="collage__piece collage__piece--framed collage__boys">
-          <Photo id="f726374f8d4cd4d00601202019d8131f" alt="Four young men in white shirts at the wedding" sizes="(max-width: 1099px) 50vw, 174px" max={800} class="av-fill" />
+          <Photo id={family.small2?.image} alt={family.small2?.alt} sizes="(max-width: 1099px) 50vw, 174px" max={800} class="av-fill" />
         </div>
 
         <div class="collage__piece collage__piece--framed collage__girls">
-          <Photo id="d9f7ddb52e7905c193509dcd92992a96" alt="Three young women in blush dresses at the wedding" sizes="(max-width: 1099px) 50vw, 190px" max={800} class="av-fill" />
+          <Photo id={family.small1?.image} alt={family.small1?.alt} sizes="(max-width: 1099px) 50vw, 190px" max={800} class="av-fill" />
         </div>
       </div>
     </div>

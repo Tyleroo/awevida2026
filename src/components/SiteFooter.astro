@@ -6,13 +6,13 @@ import { nav, site } from '../data/site';
 
 interface Props { showSocialLinks?: boolean }
 const { showSocialLinks = false } = Astro.props;
-const social = site.socialLinks.filter((s) => s.href);
+const social = (site.socialLinks ?? []).filter((s) => s?.href && s?.label);
 const legal = `© ${new Date().getFullYear()} AweVida.${site.legalNote ? ' ' + site.legalNote : ''}`;
 ---
 
 <footer class="av-footer">
   <Image src={logo} alt="AweVida" width={576} class="av-footer__logo" />
-  {site.follow.href && <Button href={site.follow.href} variant="light" external>{site.follow.label}</Button>}
+  {site.follow?.href && site.follow?.label && <Button href={site.follow.href} variant="light" external>{site.follow.label}</Button>}
   {showSocialLinks && social.length > 0 && (
     <ul class="av-footer__social">
       {social.map((s) => (

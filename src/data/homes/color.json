@@ -1,0 +1,101 @@
+{
+  "title": "Color",
+  "location": "Daniel Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/54e636020abedbd64e6df14f40e98e07.jpg",
+    "alt": "Color, Daniel Island"
+  },
+  "portfolio": {
+    "order": 5,
+    "image": "/src/assets/photos/54e636020abedbd64e6df14f40e98e07.jpg"
+  },
+  "slider": {
+    "show": true,
+    "order": 8,
+    "image": "/src/assets/photos/54e636020abedbd64e6df14f40e98e07.jpg",
+    "label": "Daniel Island"
+  },
+  "rowGap": 40,
+  "rows": [
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/3dc3da745d7ec3ba4f5fb0762f7a7dd4.jpg",
+          "alt": "Backyard lap pool bordered by brick and palms"
+        },
+        {
+          "image": "/src/assets/photos/3f2249d21e6abd25ca2b563a0f509f12.jpg",
+          "alt": "Backyard pool and outdoor kitchen lit up at dusk"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/0de92625a2db8ce618633860bbb58350.jpg",
+          "alt": "Living room with a round woven mirror, white sofas and a reclaimed-wood coffee table"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/48684c1587ebc67b39601c352de764f5.jpg",
+          "alt": "Living room with a white beamed ceiling and French doors open to the screened porch"
+        },
+        {
+          "image": "/src/assets/photos/a69e81196316d9565b9085d7804ff36f.jpg",
+          "alt": "Living room with a shiplap fireplace and a colorful forest painting above the mantel"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/f8ada3676bd86ddf68be8c4c2203c75e.jpg",
+          "alt": "Sunroom with a woven pendant light, a sectional and views into the palms"
+        },
+        {
+          "image": "/src/assets/photos/2afd87d4c53152a8c3cf13ed14e9ed7a.jpg",
+          "alt": "Upstairs loft with a hanging rattan egg chair and a white sectional"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/f08d0cd11270d3e33d30cb4dc1e57339.jpg",
+          "alt": "Kids' playroom with a mini shop counter, a dollhouse and a pink rug"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/f0747089102766fe91afb83db3d922f8.jpg",
+          "alt": "Open dining and kitchen area with a round reclaimed-wood table, white slipcovered chairs and a beaded chandelier"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/f49027a8a158ac7e4c590761250a9744.jpg",
+          "alt": "Kitchen with white cabinets, brass hardware and a scalloped tile backsplash"
+        },
+        {
+          "image": "/src/assets/photos/87ef35ca592c458abf78fddd9b9d3894.jpg",
+          "alt": "Kitchen island with gray cabinetry, opening onto a round dining table beneath a candle chandelier"
+        }
+      ]
+    }
+  ]
+}

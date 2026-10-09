@@ -1,54 +1,80 @@
 ---
+// One page per home, built from its file in src/data/homes/.
 import Base from '../../layouts/Base.astro';
 import Photo from '../../components/Photo.astro';
 import Button from '../../components/Button.astro';
-import { projects, type Project, type ProjectPhoto } from '../../data/projects';
+import { homes, type Home } from '../../data/homes';
+import { site } from '../../data/site';
+import { ratio } from '../../lib/photos';
 
 export function getStaticPaths() {
-  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+  return homes.map((home) => ({ params: { slug: home.slug }, props: { home } }));
 }
 
-interface Props { project: Project }
-const { project } = Astro.props;
+interface Props { home: Home }
+const { home } = Astro.props;
+
+const FULL = 1200; // the gallery's width on a desktop screen, in pixels
+const GAP = 20; // space between photos in a row
+
+// A cropped row is equal tiles at a set shape, which depends on how many share the row.
+const CROP_HEIGHT: Record<number, number> = { 1: 560, 2: 420 };
+
+// Work out each photo's shape and how wide it is shown.
+const rows = await Promise.all(
+  home.rows.map(async (row) => {
+    const count = row.photos.length;
+    const room = FULL - GAP * (count - 1);
+    if (row.layout === 'crop') {
+      const width = room / count;
+      const shape = width / (CROP_HEIGHT[count] ?? 360);
+      return { layout: row.layout, items: row.photos.map((p) => ({ ...p, shape, width })) };
+    }
+    // "fit": every photo is shown whole, so widths are in proportion to shapes and the row shares one height.
+    const shapes = await Promise.all(row.photos.map((p) => ratio(p.image)));
+    const total = shapes.reduce((sum, s) => sum + s, 0);
+    return { layout: row.layout, items: row.photos.map((p, i) => ({ ...p, shape: shapes[i], width: (room * shapes[i]) / total })) };
+  }),
+);
 
 // Tell the browser roughly how wide each photo is shown, so it downloads the right size.
-const sizes = (item: ProjectPhoto) => {
-  const pct = ((item.w / 1200) * 100).toFixed(1);
-  return `(max-width: 720px) 100vw, (max-width: 1300px) ${pct}vw, ${Math.round(item.w)}px`;
-};
-const ratio = (item: ProjectPhoto) => (item.w / item.h).toFixed(4);
-const description = project.intro || `${project.title}, ${project.location} — one of the homes renovated by Gabi Dalnekoff.`;
+const sizes = (width: number) =>
+  `(max-width: 720px) 100vw, (max-width: 1300px) ${((width / FULL) * 100).toFixed(1)}vw, ${Math.round(width)}px`;
+const description = home.intro || `${home.title}, ${home.location} — one of the homes renovated by Gabi Dalnekoff.`;
+const title = home.location ? `${home.title} — ${home.location}` : home.title;
 ---
 
-<Base title={`${project.title} — ${project.location}`} description={description} current="/portfolio/" shareImage={project.hero.id}>
+<Base title={title} description={description} current="/portfolio/" shareImage={home.hero.image}>
   <div class="project-hero">
-    <Photo id={project.hero.id} alt={project.hero.alt} sizes="100vw" class="av-fill" eager />
+    <Photo id={home.hero.image} alt={home.hero.alt} sizes="100vw" class="av-fill" eager />
   </div>
 
   <section class="project-head">
     <div class="project-head__inner">
-      <h1>{project.title}</h1>
-      <p class="project-head__location">{project.location}</p>
-      {project.intro && <p class="project-head__intro">{project.intro}</p>}
+      <h1>{home.title}</h1>
+      {home.location && <p class="project-head__location">{home.location}</p>}
+      {home.intro && <p class="project-head__intro">{home.intro}</p>}
     </div>
   </section>
 
-  <section class="project-gallery" style={`--row-gap: ${project.rowGap}px`}>
-    <div class="wrap project-gallery__rows">
-      {project.rows.map((row) => (
-        <div class={`project-row project-row--${row.kind}`}>
-          {row.items.map((item) => (
-            <figure class="project-row__item" style={`--ratio: ${ratio(item)}`}>
-              <Photo id={item.id} alt={item.alt} sizes={sizes(item)} max={item.w > 800 ? 2000 : 1200} class="av-fill" />
-            </figure>
-          ))}
-        </div>
-      ))}
-    </div>
-  </section>
+  {rows.length > 0 && (
+    <section class="project-gallery" style={`--row-gap: ${home.rowGap}px`}>
+      <div class="wrap project-gallery__rows">
+        {rows.map((row) => (
+          <div class={`project-row project-row--${row.layout}`}>
+            {row.items.map((item) => (
+              <figure class="project-row__item" style={`--ratio: ${item.shape.toFixed(4)}`}>
+                <Photo id={item.image} alt={item.alt} sizes={sizes(item.width)} max={item.width > 800 ? 2000 : 1200} class="av-fill" />
+              </figure>
+            ))}
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
 
   <section class="band band--next">
-    <h2 class="band__title">See the next home</h2>
-    <Button href="/portfolio/" variant="light">Back to the Homes</Button>
+    <h2 class="band__title">{site.homePages?.nextHeading}</h2>
+    <Button href="/portfolio/" variant="light">{site.homePages?.nextButton || 'Back to the Homes'}</Button>
   </section>
 </Base>

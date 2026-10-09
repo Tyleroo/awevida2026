@@ -1,0 +1,75 @@
+{
+  "title": "Bubbly",
+  "location": "Highlands, North Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/6778366ed25d9822772f938db971aa3a.jpg",
+    "alt": "Bubbly living and dining area, with a channel-tufted blue banquette under a globe chandelier"
+  },
+  "portfolio": {
+    "order": 9,
+    "image": "/src/assets/photos/6778366ed25d9822772f938db971aa3a.jpg"
+  },
+  "slider": {
+    "show": true,
+    "order": 3,
+    "image": "/src/assets/photos/6778366ed25d9822772f938db971aa3a.jpg",
+    "label": ""
+  },
+  "rowGap": 40,
+  "rows": [
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/39925ed8f307924b52e78776b9396b2e.jpg",
+          "alt": "Screened porch with two rope-hung daybeds and a view into the trees"
+        },
+        {
+          "image": "/src/assets/photos/b9cefe3fb1f1457c94dc172f9edfa28d.jpg",
+          "alt": "Screened porch daybeds facing each other over a wine table"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/be3c2f43aab3de2eaec2b46e2fa58511.jpg",
+          "alt": "Backyard fire pit with black Adirondack chairs beside a creek"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/23e02e057f783fb1b89c099308cbc4df.jpg",
+          "alt": "Living room with a white sectional, leather chairs and a blue-and-white gallery wall"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/2ad8e8164d96af82dcc40d0dff692d72.jpg",
+          "alt": "Kitchen with navy cabinets, brass hardware and a penny-tile backsplash"
+        }
+      ]
+    },
+    {
+      "layout": "crop",
+      "photos": [
+        {
+          "image": "/src/assets/photos/165aa0a275d856a1cfcf7d31626c15d6.jpg",
+          "alt": "Primary bedroom with a reclaimed-wood headboard, vaulted shiplap ceiling and barn doors"
+        },
+        {
+          "image": "/src/assets/photos/233dc41a94b55f482d0007165691fc2a.jpg",
+          "alt": "Second bedroom with gray and blue bedding and a driftwood mirror"
+        }
+      ]
+    }
+  ]
+}

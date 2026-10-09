@@ -11,7 +11,7 @@ server code and no CMS.
 | `/` | Home | `src/pages/index.astro` |
 | `/about/` | About Gabi | `src/pages/about.astro` |
 | `/portfolio/` | Portfolio grid | `src/pages/portfolio/index.astro` |
-| `/portfolio/<home>/` | One page per home (9 of them) | `src/pages/portfolio/[slug].astro` + `src/data/projects/*.json` |
+| `/portfolio/<home>/` | One page per home | `src/pages/portfolio/[slug].astro` + `src/data/homes/*.json` |
 | `/contact/` | Contact form | `src/pages/contact.astro` |
 | `/404.html` | Page Not Found | `src/pages/404.astro` |
 
@@ -50,36 +50,57 @@ The upload only adds and replaces files; it never deletes anything on the server
 
 To publish by hand instead: `npm run build`, then upload the contents of `dist/`, replacing what's there.
 
-## Things to fill in
+## Editing the site without code (Pages CMS)
 
-All in `src/data/site.ts`:
+The wording and photos can be changed in a browser with [Pages CMS](https://pagescms.org), a free editor that
+works directly on this repository.
 
-- `formspreeId` — the contact form will not deliver messages until this is a real Formspree form ID.
-- `email` and `basedIn` — shown on the Contact page once filled in.
-- `follow` and `socialLinks` — the social links. LinkedIn and YouTube are hidden until they have addresses.
-- `legalNote` — any extra footer text after the copyright line.
+1. Go to https://app.pagescms.org and sign in. The repository owner signs in with GitHub and installs the
+   Pages CMS app on this repository; other people are invited by email from the editor's Collaborators screen
+   and need no GitHub account.
+2. Open this repository. The sidebar lists what can be edited:
+   - **Homes**: one entry per home, with its name, location, "About this home" paragraph, main photo,
+     Portfolio card, Home page slider settings and its gallery, row by row.
+   - **Home page, About page, Portfolio page, Contact page, Page Not Found page**: the wording and photos on each.
+   - **Site-wide**: the menu names, footer links, the scrolling photo strip and other wording used on every page.
+   - **Media**: every photo. New photos are uploaded here or from any photo field.
+3. Make a change and press Save. That commits to this repository, the site rebuilds, and the change is live
+   about a minute later. Each save is a separate entry in the repository's history, so any edit can be undone.
 
-Each home's intro paragraph is the `intro` field in its file under `src/data/projects/`. While it is empty,
-the page shows just the name and location.
+Good to know:
 
-## Adding a home
+- To swap a gallery photo: Homes > the home > Gallery > open the row > open the photo > choose or upload another.
+  The row resizes itself to the new photo's shape.
+- Upload JPEG, PNG or WebP. Large files are fine: the site makes its own smaller copies.
+- A field left empty is simply left off the page.
+- The layout and styling are not editable here; those are in the code (`src/`).
+- `.pages.yml` at the top of the repository defines the editor's screens. If a key is added to a content file,
+  add a matching field there, or the editor will drop the key the next time it saves that file.
 
-1. Put its photos in `src/assets/photos/` (JPEG, any file name ending `.jpg`).
-2. Copy one of the files in `src/data/projects/` to a new name, e.g. `my-new-home.json`, and edit it:
-   - `slug` is the page address (`/portfolio/my-new-home/`).
-   - `hero` is the wide photo at the top. Photos are referred to by file name without `.jpg`.
-   - `rows` are the rows of photos, top to bottom. A `"fit"` row shows every photo whole: give each photo's
-     `w` and `h` (only the proportion matters) and the row is sized so they share one height. A `"crop"`
-     row is equal columns, with each photo cropped to the `w` x `h` shape given.
-   - `rowGap` is the space between rows, in pixels.
-3. Add it to the list in `src/data/projects.ts`, with the photo to use on its Portfolio card.
-4. To feature it in the Home slider, add a line to `slides` in `src/pages/index.astro`.
+## Content files
+
+Everything the editor changes is a JSON file under `src/data/`:
+
+- `src/data/homes/<name>.json`: one per home. The file name is the page address
+  (`the-cove.json` is `/portfolio/the-cove/`). Adding a file adds a home; nothing else needs registering.
+  - `rows` is the gallery. A `"fit"` row shows every photo whole, sized so the row shares one height.
+    A `"crop"` row is equal tiles with each photo trimmed to fill its tile.
+  - `portfolio.order` and `slider.order` set the home's position on the Portfolio page and in the Home slider.
+- `src/data/pages/*.json`: the wording and photos for each page.
+- `src/data/site.json`: wording and photos shared by every page.
+
+Photos are referred to by path, for example `/src/assets/photos/kitchen.jpg`. A reference to a photo that
+isn't in the folder is skipped (with a warning in the build log) so one mistake can't stop the site building.
+
+The Formspree form ID and the site address are technical settings in `src/data/site.ts`.
 
 ## Where things are
 
 - `src/styles/tokens.css` — the brand colours, fonts and spacing.
 - `src/styles/components.css` — header, footer, buttons, sliders, cards, form.
 - `src/styles/pages.css` — the layout of each page.
+- `src/data/` — the editable content (see above).
+- `.pages.yml` — the Pages CMS editor's configuration.
 - `src/components/` — the reusable pieces (header, footer, hero slider, photo strip and so on).
 - `public/` — files copied to the site as they are (`.htaccess`, favicon, `robots.txt`).
 

@@ -1,0 +1,112 @@
+{
+  "title": "Soul Cottage",
+  "location": "Highlands, North Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/e1ff942a10c69c76e317aba64e8ec849.jpg",
+    "alt": "Soul Cottage living room beneath a vaulted wood-beamed ceiling, with leather chairs, gray sofas, a hanging chair and windows into the trees"
+  },
+  "portfolio": {
+    "order": 4,
+    "image": "/src/assets/photos/e1ff942a10c69c76e317aba64e8ec849.jpg"
+  },
+  "slider": {
+    "show": true,
+    "order": 6,
+    "image": "/src/assets/photos/e1ff942a10c69c76e317aba64e8ec849.jpg",
+    "label": "Highlands, NC"
+  },
+  "rowGap": 20,
+  "rows": [
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/e5b68dc297631600a189617ba80c61bd.jpg",
+          "alt": "Front porch with a wide oak door, vintage skis on the wall, a driftwood bench and a river-stone path"
+        },
+        {
+          "image": "/src/assets/photos/116eecbaed98380e413b17bdb301ecaa.jpg",
+          "alt": "Side entry off the deck, a sage door under a \"stay awhile\" sign"
+        },
+        {
+          "image": "/src/assets/photos/41f5287de2eb2ad518effdd8bdb97982.jpg",
+          "alt": "Fire pit with white Adirondack chairs on the gravel beside the deck"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/f7f4a18f653a8e4a4588f2e8d947942f.jpg",
+          "alt": "Living room under the beamed ceiling, with a reclaimed-beam sofa table, open to the kitchen and dining room"
+        },
+        {
+          "image": "/src/assets/photos/07b670abaebf5cc0ffcf261a8573a5ab.jpg",
+          "alt": "Whitewashed barn door to the office, with antique snowshoes on the shiplap wall"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/4fe104e2a4f4a827d2b6414af1b95fb8.jpg",
+          "alt": "Office with a shiplap desk, black pendants and a wide window onto the deck and woods"
+        },
+        {
+          "image": "/src/assets/photos/4b199a5905083f9f6f7de3e46ada98d7.jpg",
+          "alt": "View past the snowshoes down the hall and into the kitchen"
+        },
+        {
+          "image": "/src/assets/photos/d4a6d4a50ad3de67df1b3f3042942b8e.jpg",
+          "alt": "Kitchen with a butcher-block counter, gray lower cabinets and vintage gray pantry doors"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/6f69bf17b470190254db1df3a574f7d4.jpg",
+          "alt": "Bedroom with a sage-green bed, linen curtains and a window wall onto the deck"
+        },
+        {
+          "image": "/src/assets/photos/9c3547c34b16a860c88322c1c0b4abcd.jpg",
+          "alt": "Bedroom with a cane chair, scalloped jute rugs and a picture window onto the hillside"
+        },
+        {
+          "image": "/src/assets/photos/a5b73ded5cd30e68c686b68174158c0d.jpg",
+          "alt": "Bedroom with a white iron bed, a rustic bench and a corner of windows into the pines"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/885221f00f8d774761559035557f77c2.jpg",
+          "alt": "Attic loft with a hammock, sheepskins and a daybed under rough-sawn beams"
+        },
+        {
+          "image": "/src/assets/photos/4a156f4793553c5a678335319363bf29.jpg",
+          "alt": "Attic loft hammock beside the stair rail and built-in bed"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/b41a7ddc68516b1fa5ce8d2472161765.jpg",
+          "alt": "Bathroom with a freestanding tub, wood-look tile, sage mirrors and brass fixtures"
+        },
+        {
+          "image": "/src/assets/photos/fc27e29f7958f33a2013afdc43c8ebeb.jpg",
+          "alt": "Bathroom with a carved wood-block mirror, a double vanity and a geometric-tile shower"
+        }
+      ]
+    }
+  ]
+}

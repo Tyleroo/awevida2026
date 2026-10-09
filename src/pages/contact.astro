@@ -1,59 +1,63 @@
 ---
+// Contact. Wording, the photo and the contact details are in src/data/pages/contact.json.
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import Button from '../components/Button.astro';
+import page from '../data/pages/contact.json';
 import { site } from '../data/site';
 
 const endpoint = `https://formspree.io/f/${site.formspreeId}`;
+const form = page.form ?? {};
+const details = page.details ?? {};
 ---
 
-<Base title="Contact" description="Have a question or compliment? Get in touch with AweVida." current="/contact/" shareImage="b6a185759c6046995b6653396a29c652">
+<Base title="Contact" description={page.description} current="/contact/" shareImage={page.photo?.image}>
   <section class="contact">
     <div class="contact__inner">
       <div class="contact__photo">
-        <Photo id="b6a185759c6046995b6653396a29c652" alt="" sizes="(max-width: 760px) 100vw, 900px" class="av-fill" eager />
+        <Photo id={page.photo?.image} alt={page.photo?.alt} sizes="(max-width: 760px) 100vw, 900px" class="av-fill" eager />
       </div>
 
       <div class="contact__body">
-        <h1>Contact Us</h1>
-        <p class="contact__lede">Have a question or compliment? Let us know in the form below.</p>
+        <h1>{page.heading}</h1>
+        <p class="contact__lede">{page.lede}</p>
 
-        <form class="av-form" action={endpoint} method="POST" data-contact-form>
+        <form class="av-form" action={endpoint} method="POST" data-contact-form data-sent={form.sentMessage} data-error={form.errorMessage}>
           <div class="av-field">
-            <label class="av-field__label" for="contact-name">Name</label>
-            <input class="av-field__input" id="contact-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            <label class="av-field__label" for="contact-name">{form.nameLabel}</label>
+            <input class="av-field__input" id="contact-name" name="name" type="text" placeholder={form.namePlaceholder} autocomplete="name" required />
           </div>
           <div class="av-field">
-            <label class="av-field__label" for="contact-email">Email Address</label>
-            <input class="av-field__input" id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            <label class="av-field__label" for="contact-email">{form.emailLabel}</label>
+            <input class="av-field__input" id="contact-email" name="email" type="email" placeholder={form.emailPlaceholder} autocomplete="email" required />
           </div>
           <div class="av-field">
-            <label class="av-field__label" for="contact-message">Message</label>
-            <textarea class="av-field__input" id="contact-message" name="message" rows="6" placeholder="Whatever you would like to say." required></textarea>
+            <label class="av-field__label" for="contact-message">{form.messageLabel}</label>
+            <textarea class="av-field__input" id="contact-message" name="message" rows="6" placeholder={form.messagePlaceholder} required></textarea>
           </div>
           <!-- Spam trap: people never see or fill this in; Formspree discards submissions that do. -->
           <div class="av-form__trap" aria-hidden="true">
             <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
           </div>
           <input type="hidden" name="_subject" value="New message from awevida.com" />
-          <div class="av-form__actions"><Button type="submit">Send Inquiry</Button></div>
+          <div class="av-form__actions"><Button type="submit">{form.buttonLabel || 'Send'}</Button></div>
           <p class="av-form__status" role="status" aria-live="polite" data-status></p>
         </form>
 
         <div class="contact__details">
-          {site.email && (
+          {details.email && (
             <div>
               <h2>Email</h2>
-              <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+              <p><a href={`mailto:${details.email}`}>{details.email}</a></p>
             </div>
           )}
-          {site.basedIn && (
+          {details.basedIn && (
             <div>
               <h2>Based in</h2>
-              <p>{site.basedIn}</p>
+              <p>{details.basedIn}</p>
             </div>
           )}
-          {site.follow.href && (
+          {site.follow?.href && site.follow?.handle && (
             <div>
               <h2>Follow</h2>
               <p><a href={site.follow.href} target="_blank" rel="noopener">{site.follow.handle}</a></p>
@@ -87,10 +91,10 @@ const endpoint = `https://formspree.io/f/${site.formspreeId}`;
       if (!response.ok) throw new Error(String(response.status));
       form.reset();
       status.dataset.state = 'sent';
-      status.textContent = 'Thank you — your message has been sent.';
+      status.textContent = form.dataset.sent || 'Thank you — your message has been sent.';
     } catch {
       status.dataset.state = 'error';
-      status.textContent = 'Sorry, something went wrong and your message was not sent. Please try again in a moment.';
+      status.textContent = form.dataset.error || 'Sorry, something went wrong and your message was not sent. Please try again in a moment.';
     } finally {
       button.disabled = false;
     }

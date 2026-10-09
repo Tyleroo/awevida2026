@@ -1,0 +1,74 @@
+{
+  "description": "Fifteen years ago, as a side business and to fulfill an incurable itch for expressing her creativity through exciting house projects, Gabi got into residential real estate.",
+  "menu": {
+    "home": "Home",
+    "about": "About Gabi",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "follow": {
+    "label": "Follow @AWEVIDA_COMMUNITY",
+    "handle": "@AWEVIDA_COMMUNITY",
+    "href": "https://www.instagram.com/awevida_community/"
+  },
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/awevida_community/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/awevidatoday"
+    },
+    {
+      "label": "LinkedIn",
+      "href": ""
+    },
+    {
+      "label": "YouTube",
+      "href": ""
+    }
+  ],
+  "legalNote": "",
+  "strip": {
+    "label": "Rooms from recent homes",
+    "photos": [
+      {
+        "image": "/src/assets/photos/9066e961be0a02ffb6133dc9e1d7a040.jpg",
+        "alt": "Living room with a stone fireplace and vaulted plank ceiling"
+      },
+      {
+        "image": "/src/assets/photos/92b0300f7ea86394e81e78cb5db333a8.jpg",
+        "alt": "Screened porch with a white sectional under live oaks"
+      },
+      {
+        "image": "/src/assets/photos/0486becc7716a7794ca841c224fb00ac.jpg",
+        "alt": "Porch with two rope-hung bed swings"
+      },
+      {
+        "image": "/src/assets/photos/5b8a6163c3d1008b2ee1defd344c55b0.jpg",
+        "alt": "Bunk room with a playhouse counter and stools"
+      },
+      {
+        "image": "/src/assets/photos/2bf2ca2387d04f7835b7a3e20a46bdf5.jpg",
+        "alt": "Sunroom with a white sectional and woven chairs"
+      },
+      {
+        "image": "/src/assets/photos/bb4dc000ec39d2f3107888a67d54a8ac.jpg",
+        "alt": "Living room with a round straw mirror and reclaimed wood table"
+      },
+      {
+        "image": "/src/assets/photos/e9d6dc319c32379b0bbbd2f4f0e68b1b.jpg",
+        "alt": "Living room with a marble fireplace and coffered ceiling"
+      },
+      {
+        "image": "/src/assets/photos/d413c6ed41c0e7cb40aecaf140609688.jpg",
+        "alt": "Bedroom with striped bedding and a reclaimed wood bench"
+      }
+    ]
+  },
+  "homePages": {
+    "nextHeading": "See the next home",
+    "nextButton": "Back to the Homes"
+  }
+}

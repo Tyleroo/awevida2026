@@ -1,41 +1,47 @@
 ---
 // Shown for any address that doesn't exist. (public/index.php is what makes the server use it.)
+// Its wording and photo are in src/data/pages/not-found.json.
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Button from '../components/Button.astro';
-import { projects, projectUrl } from '../data/projects';
+import page from '../data/pages/not-found.json';
+import { homes, homeUrl } from '../data/homes';
 
-// Four homes to offer instead.
-const picks = ['the-cove', 'dalton', 'the-cape', 'soul-cottage']
-  .map((slug) => projects.find((p) => p.slug === slug)!)
-  .filter(Boolean);
+// Four homes to offer instead: these if they exist, topped up from the Portfolio order.
+const preferred = ['the-cove', 'dalton', 'the-cape', 'soul-cottage'];
+const picks = [
+  ...preferred.map((slug) => homes.find((home) => home.slug === slug)).filter((home) => home !== undefined),
+  ...homes.filter((home) => !preferred.includes(home.slug)),
+].slice(0, 4);
 ---
 
 <Base title="Page Not Found" description="This page isn't here, but the homes are." noindex>
   <section class="av-heroslider lost">
     <div class="av-heroslider__stage">
       <div class="av-heroslider__frame" data-active="true">
-        <Photo id="8ba7fc724b78c237f665425a0cf9567a" alt="Front doors standing open onto an entry hall" sizes="(max-width: 720px) 180vw, 100vw" class="av-fill" eager position="50% 60%" />
+        <Photo id={page.photo?.image} alt={page.photo?.alt} sizes="(max-width: 720px) 180vw, 100vw" class="av-fill" eager position="50% 60%" />
       </div>
       <div class="av-heroslider__bar">
         <div class="av-heroslider__panel">
-          <p class="av-heroslider__caption"><b>404</b>Page not found</p>
-          <h1 class="av-heroslider__title">Wrong Door</h1>
-          <div><a class="av-heroslider__link" href="/">Back to Home<span aria-hidden="true"> →</span></a></div>
+          <p class="av-heroslider__caption"><b>404</b>{page.caption}</p>
+          <h1 class="av-heroslider__title">{page.title}</h1>
+          <div><a class="av-heroslider__link" href="/">{page.linkLabel || 'Back to Home'}<span aria-hidden="true"> →</span></a></div>
         </div>
       </div>
     </div>
-    <p class="lost__note">The page you were looking for isn't behind this one. It may have moved, or the address may have a typo. The homes are all still open.</p>
+    <p class="lost__note">{page.note}</p>
   </section>
 
-  <section class="lost-homes">
-    <div class="wrap">
-      <h2 class="lost-homes__title">Step inside one of these</h2>
-      <div class="av-grid">
-        {picks.map((p) => <ProjectCard href={projectUrl(p.slug)} title={p.title} location={p.location} image={p.card} />)}
+  {picks.length > 0 && (
+    <section class="lost-homes">
+      <div class="wrap">
+        <h2 class="lost-homes__title">{page.homesHeading}</h2>
+        <div class="av-grid">
+          {picks.map((home) => <ProjectCard href={homeUrl(home.slug)} title={home.title} location={home.location} image={home.portfolio.image} />)}
+        </div>
+        <p class="lost-homes__more"><Button href="/portfolio/">{page.buttonLabel || 'See All the Homes'}</Button></p>
       </div>
-      <p class="lost-homes__more"><Button href="/portfolio/">See All the Homes</Button></p>
-    </div>
-  </section>
+    </section>
+  )}
 </Base>

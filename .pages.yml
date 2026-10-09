@@ -1,0 +1,564 @@
+# Pages CMS configuration (https://pagescms.org).
+#
+# This file tells the editor at app.pagescms.org which parts of the site can be changed and how to label them.
+# Saving in the editor commits to this repository, and the "Build and deploy" workflow publishes the change.
+#
+#   media    where photos are kept (uploads go here too)
+#   content  the editable sections: the homes, one entry per page, and site-wide wording
+#
+# Every key in the content files (src/data/**/*.json) has a field here, so the editor keeps all of them when it saves.
+
+media:
+  input: src/assets/photos
+  output: /src/assets/photos
+  extensions:
+    - jpg
+    - jpeg
+    - png
+    - webp
+  rename: true
+
+content:
+  - name: homes
+    label: Homes
+    type: collection
+    path: src/data/homes
+    format: json
+    description: One entry per home. Each has its own page on the site and a card on the Portfolio page.
+    filename:
+      template: '{primary}.json'
+      field: create
+    operations:
+      create: true
+      rename: false
+      delete: true
+    view:
+      fields:
+        - title
+        - location
+      primary: title
+      sort:
+        - title
+      search:
+        - title
+        - location
+    fields:
+      - name: title
+        label: Name of the home
+        type: string
+        description: Shown as the page heading, on its Portfolio card and in the Home page slider.
+        required: true
+      - name: location
+        label: Location
+        type: string
+        description: For example "Daniel Island, South Carolina". Shown under the name.
+      - name: intro
+        label: About this home
+        type: text
+        description: The paragraph under the name and location. Leave empty to show none.
+      - name: hero
+        label: Main photo
+        type: object
+        description: The wide photo across the top of the home's page.
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Description of the photo
+            type: string
+            description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+      - name: portfolio
+        label: Portfolio card
+        type: object
+        fields:
+          - name: order
+            label: Position
+            type: number
+            description: 1 is first on the Portfolio page, 2 is second, and so on.
+            default: 99
+          - name: image
+            label: Card photo
+            type: image
+            description: The photo on this home's Portfolio card. Leave empty to use the main photo.
+      - name: slider
+        label: Home page slider
+        type: object
+        fields:
+          - name: show
+            label: Show in the slider
+            type: boolean
+            default: false
+          - name: order
+            label: Position
+            type: number
+            description: 1 is the first slide, 2 is the second, and so on.
+            default: 99
+          - name: image
+            label: Slide photo
+            type: image
+            description: The photo for this home's slide. Leave empty to use the main photo.
+          - name: label
+            label: Short location
+            type: string
+            description: Optional. Shown after the name on the slide, for example "Daniel Island".
+      - name: rowGap
+        label: Space between rows (pixels)
+        type: number
+        hidden: true
+        default: 20
+      - name: rows
+        label: Gallery
+        type: object
+        description: The photos down the page, one row at a time. To swap a photo, open its row, open the photo and choose a new one.
+        list:
+          collapsible:
+            collapsed: true
+            summary: Row {index}
+        fields:
+          - name: layout
+            label: Row style
+            type: select
+            default: fit
+            description: '"fit" shows every photo whole and sizes them to share one height. "crop" makes equal tiles and trims each photo to fill its tile.'
+            options:
+              values:
+                - fit
+                - crop
+          - name: photos
+            label: Photos in this row
+            type: object
+            description: One to three photos works best.
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                required: true
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+            list:
+              collapsible:
+                collapsed: true
+                summary: 'Photo {index}: {alt}'
+
+  - name: page-home
+    label: Home page
+    type: file
+    path: src/data/pages/home.json
+    format: json
+    fields:
+      - name: slider
+        label: Slider wording
+        type: object
+        description: The slides themselves come from each home's "Home page slider" settings.
+        fields:
+          - name: title
+            label: Heading on the slider
+            type: string
+          - name: linkLabel
+            label: Link text
+            type: string
+      - name: standfirst
+        label: Sentence under the slider
+        type: text
+        description: On large screens the line breaks you type here are kept.
+      - name: bio
+        label: Meet Gabi section
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small heading
+            type: string
+          - name: name
+            label: Name
+            type: string
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true
+          - name: buttonLabel
+            label: Button text
+            type: string
+          - name: portrait
+            label: Portrait
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+
+  - name: page-about
+    label: About page
+    type: file
+    path: src/data/pages/about.json
+    format: json
+    fields:
+      - name: title
+        label: Page heading
+        type: string
+      - name: intro
+        label: Introduction
+        type: text
+      - name: band
+        label: Rotating photo band
+        type: object
+        description: The wide photos that fade from one to the next.
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: alt
+            label: Description of the photo
+            type: string
+            description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+          - name: position
+            label: Which part to show
+            type: string
+            description: Optional. The band shows a slice of each photo. "50% 70%" favours the lower part, "50% 30%" the upper part. Leave empty for the middle.
+        list:
+          collapsible:
+            collapsed: true
+            summary: 'Photo {index}: {alt}'
+      - name: brings
+        label: '"What she brings" section'
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: text
+            label: Text
+            type: text
+      - name: family
+        label: Family section
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small heading
+            type: string
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true
+          - name: wide1
+            label: Wide photo at the top
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+          - name: tall
+            label: Tall photo beside the text
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+          - name: small1
+            label: First small photo
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+          - name: small2
+            label: Second small photo
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+          - name: wide2
+            label: Wide photo at the bottom
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+
+  - name: page-portfolio
+    label: Portfolio page
+    type: file
+    path: src/data/pages/portfolio.json
+    format: json
+    description: The cards on this page come from the Homes.
+    fields:
+      - name: band
+        label: Rotating photo band
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small label on the photos
+            type: string
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                required: true
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+            list:
+              collapsible:
+                collapsed: true
+                summary: 'Photo {index}: {alt}'
+      - name: heading
+        label: Page heading
+        type: string
+      - name: closing
+        label: Closing section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: buttonLabel
+            label: Button text
+            type: string
+      - name: description
+        label: Search description
+        type: text
+        description: One sentence for Google and for link previews. Not shown on the page.
+
+  - name: page-contact
+    label: Contact page
+    type: file
+    path: src/data/pages/contact.json
+    format: json
+    fields:
+      - name: heading
+        label: Page heading
+        type: string
+      - name: lede
+        label: Sentence under the heading
+        type: text
+      - name: photo
+        label: Photo beside the form
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+          - name: alt
+            label: Description of the photo
+            type: string
+            description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+      - name: details
+        label: Contact details
+        type: object
+        description: Shown under the form.
+        fields:
+          - name: email
+            label: Email address
+            type: string
+            description: Leave empty to hide it.
+          - name: basedIn
+            label: Based in
+            type: string
+            description: For example "Charleston, South Carolina". Leave empty to hide it.
+      - name: form
+        label: Form wording
+        type: object
+        fields:
+          - name: nameLabel
+            label: 'Name: label'
+            type: string
+          - name: namePlaceholder
+            label: 'Name: hint inside the box'
+            type: string
+          - name: emailLabel
+            label: 'Email: label'
+            type: string
+          - name: emailPlaceholder
+            label: 'Email: hint inside the box'
+            type: string
+          - name: messageLabel
+            label: 'Message: label'
+            type: string
+          - name: messagePlaceholder
+            label: 'Message: hint inside the box'
+            type: string
+          - name: buttonLabel
+            label: Button text
+            type: string
+          - name: sentMessage
+            label: Shown after a message is sent
+            type: string
+          - name: errorMessage
+            label: Shown if sending fails
+            type: string
+      - name: description
+        label: Search description
+        type: text
+        description: One sentence for Google and for link previews. Not shown on the page.
+
+  - name: page-not-found
+    label: Page Not Found page
+    type: file
+    path: src/data/pages/not-found.json
+    format: json
+    description: Shown when someone follows a link to a page that doesn't exist.
+    fields:
+      - name: photo
+        label: Photo
+        type: object
+        fields:
+          - name: image
+            label: Photo
+            type: image
+          - name: alt
+            label: Description of the photo
+            type: string
+            description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+      - name: caption
+        label: Small text beside "404"
+        type: string
+      - name: title
+        label: Heading
+        type: string
+      - name: linkLabel
+        label: Link text
+        type: string
+      - name: note
+        label: Sentence under the photo
+        type: text
+      - name: homesHeading
+        label: Heading above the homes
+        type: string
+      - name: buttonLabel
+        label: Button text
+        type: string
+
+  - name: site
+    label: Site-wide
+    type: file
+    path: src/data/site.json
+    format: json
+    description: Wording and photos that appear on every page.
+    fields:
+      - name: menu
+        label: Menu
+        type: object
+        description: The names of the links in the header and footer.
+        fields:
+          - name: home
+            label: Home
+            type: string
+          - name: about
+            label: About
+            type: string
+          - name: portfolio
+            label: Portfolio
+            type: string
+          - name: contact
+            label: Contact
+            type: string
+      - name: follow
+        label: Follow button
+        type: object
+        description: The button in the footer of every page.
+        fields:
+          - name: label
+            label: Button text
+            type: string
+          - name: handle
+            label: Handle
+            type: string
+            description: Shown on the Contact page.
+          - name: href
+            label: Link
+            type: string
+            description: The full address, starting with https://
+      - name: socialLinks
+        label: Social links
+        type: object
+        description: Listed in the footer of the Home page. A link with no address is hidden.
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{label}'
+        fields:
+          - name: label
+            label: Name
+            type: string
+            required: true
+          - name: href
+            label: Link
+            type: string
+            description: The full address, starting with https://
+      - name: legalNote
+        label: Extra footer text
+        type: string
+        description: Optional. Shown after "© year AweVida."
+      - name: strip
+        label: Scrolling photo strip
+        type: object
+        description: The band of photos that scrolls above the footer on every page.
+        fields:
+          - name: label
+            label: Description of the strip
+            type: string
+            description: Read aloud by screen readers. Not shown on the page.
+          - name: photos
+            label: Photos
+            type: object
+            description: About eight photos keeps the strip full on wide screens.
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                required: true
+              - name: alt
+                label: Description of the photo
+                type: string
+                description: Describe what the photo shows, in a few words. Read aloud by screen readers and used by Google.
+            list:
+              collapsible:
+                collapsed: true
+                summary: 'Photo {index}: {alt}'
+      - name: homePages
+        label: Bottom of each home's page
+        type: object
+        fields:
+          - name: nextHeading
+            label: Heading
+            type: string
+          - name: nextButton
+            label: Button text
+            type: string
+      - name: description
+        label: Search description
+        type: text
+        description: One or two sentences about the site for Google and link previews. Not shown on the page.

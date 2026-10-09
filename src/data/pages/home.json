@@ -1,0 +1,19 @@
+{
+  "slider": {
+    "title": "Our Latest Projects",
+    "linkLabel": "View the Home"
+  },
+  "standfirst": "Fifteen years ago, as a side business and to fulfill an\nincurable itch for expressing her creativity through exciting\nhouse projects, Gabi got into residential real estate.",
+  "bio": {
+    "eyebrow": "Meet Gabi",
+    "name": "Gabi Dalnekoff",
+    "paragraphs": [
+      "Gabi Dalnekoff is a Brazilian-born business woman with a drive for living a multifaceted life. She has excelled in the corporate world often building entirely new companies from the ground up. Fifteen years ago, as a side business and to fulfill an incurable itch for expressing her creativity through exciting house projects, Gabi got into residential real estate. She has been buying, renovating, and upgrading her real estate portfolio ever since. Gabi credits property investment as what has afforded her the freedom to make her own schedule and live life on her terms."
+    ],
+    "buttonLabel": "Meet Gabi",
+    "portrait": {
+      "image": "/src/assets/photos/54e953989acadd4be9193ec87e8c10bb.jpg",
+      "alt": "Gabi Dalnekoff standing beside a wooden front door"
+    }
+  }
+}

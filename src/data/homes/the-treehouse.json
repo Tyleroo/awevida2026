@@ -1,0 +1,185 @@
+{
+  "title": "The Treehouse",
+  "location": "Daniel Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/50b711c75e569b7eb6b3ffa75f2fadde.jpg",
+    "alt": "The Treehouse at dusk, a two-story white board-and-batten home framed by palms and live oaks"
+  },
+  "portfolio": {
+    "order": 8,
+    "image": "/src/assets/photos/50b711c75e569b7eb6b3ffa75f2fadde.jpg"
+  },
+  "slider": {
+    "show": true,
+    "order": 2,
+    "image": "/src/assets/photos/50b711c75e569b7eb6b3ffa75f2fadde.jpg",
+    "label": ""
+  },
+  "rowGap": 20,
+  "rows": [
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/7cfe85a37c45cf84b0ad0dade2fb3201.jpg",
+          "alt": "Back of the house at twilight, the screened porches glowing beneath the live oaks"
+        },
+        {
+          "image": "/src/assets/photos/a62bb01b8f05137e42709791b2e79ced.jpg",
+          "alt": "Screened lower porch with turf, rocking chairs and a long wood table"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/c1d75b25f64f97cdcd810175875ab6d9.jpg",
+          "alt": "Screened porch with a white sectional and a live-edge coffee table under the oaks"
+        },
+        {
+          "image": "/src/assets/photos/a3f8316509b675cac0ed6f923474b5aa.jpg",
+          "alt": "Screened porch with a round dining table looking into the live oaks"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/efa313038f23444199a882ce01c60b35.jpg",
+          "alt": "Outdoor \"Seaside Diner\" bar with turf flooring and counter stools"
+        },
+        {
+          "image": "/src/assets/photos/9ec8e9c0dbe40fc7150c8c7f3af078b8.jpg",
+          "alt": "Surfboard tree swing hanging from a live oak draped in Spanish moss"
+        },
+        {
+          "image": "/src/assets/photos/13adc2de8ef1fb97f89ba016fd3834c4.jpg",
+          "alt": "Backyard teepee garden feature on a gravel path lined with ferns"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/49f7b4f9ba647aa9de90afc3a95e56cf.jpg",
+          "alt": "Living room with a white sectional under a beaded chandelier"
+        },
+        {
+          "image": "/src/assets/photos/773021c1f5f70e4cfc5c27ba76c44dfd.jpg",
+          "alt": "Entry with a wide oak pivot door, a living plant wall and a driftwood bench"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/ded3207e2d42a650f275a752daad11aa.jpg",
+          "alt": "Looking up the open oak staircase to a geometric chandelier"
+        },
+        {
+          "image": "/src/assets/photos/8ba79aa0300a8fe4593b8f5dea3219aa.jpg",
+          "alt": "Entry staircase with open oak treads and a geometric chandelier"
+        },
+        {
+          "image": "/src/assets/photos/dcc1423ea647322bc9d72c59bf3fb58e.jpg",
+          "alt": "Built-in wood-slat reading nook with pillows beside a marble wall"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/2383b2e508d5ba05eff6cfb772cf6825.jpg",
+          "alt": "White kitchen with a long island, wood shelving and a hidden pantry"
+        },
+        {
+          "image": "/src/assets/photos/511f023b736b6eca49438aedba77f8cb.jpg",
+          "alt": "Kitchen and pantry view with open shelving and a woven pendant"
+        },
+        {
+          "image": "/src/assets/photos/1debf23dcc79e0de2c349b311c52fb8d.jpg",
+          "alt": "Galley kitchen with a window, wood shelving and a vintage runner"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/96719eeade749450ee3fcd6331a3b929.jpg",
+          "alt": "Dining room with black sliding glass doors open to the porch"
+        },
+        {
+          "image": "/src/assets/photos/96f50035ff690b729e42dd4585fa322f.jpg",
+          "alt": "White island with woven baskets beneath a white pendant"
+        },
+        {
+          "image": "/src/assets/photos/c6ead3c834e739d1a6e26013935b239c.jpg",
+          "alt": "Dining room with tall black-framed windows and a fiddle-leaf fig"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/4afeb7909476a7ec47769a9e3c4f5580.jpg",
+          "alt": "Bedroom with a pink sunburst barn door, sheepskins and pale curtains"
+        },
+        {
+          "image": "/src/assets/photos/9a547a8988cbe711223182461c51d44a.jpg",
+          "alt": "Bedroom with a white four-poster bed and a round woven mirror"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/27a4a34eeef7cbd45faec8d86422a327.jpg",
+          "alt": "Navy and white bedroom with a ladder shelf and sailboat art"
+        },
+        {
+          "image": "/src/assets/photos/36c1d4f16e8155a52d75532801ec97f9.jpg",
+          "alt": "Bedroom with built-in bunk nooks and woven lamps"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/8bc686c0a999a5f999bf72115b1b25df.jpg",
+          "alt": "Bedroom with gray striped bedding and abstract art"
+        },
+        {
+          "image": "/src/assets/photos/582b348d97613af82d8b478bfb339c00.jpg",
+          "alt": "Gray striped bedroom with a woven bench and a doorway through to the bath"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/85dff5cd47822f4fbcbbee565d857f21.jpg",
+          "alt": "Freestanding tub against a reclaimed-wood wall"
+        },
+        {
+          "image": "/src/assets/photos/867fc89672bf02bdb9b7985ab5a0a0eb.jpg",
+          "alt": "Double vessel-sink vanity in reclaimed wood beneath a palm-framed window"
+        },
+        {
+          "image": "/src/assets/photos/0d0f1043c71bdf0e48119dacaf55bbd0.jpg",
+          "alt": "Walk-in shower with geometric wood-look tile"
+        }
+      ]
+    }
+  ]
+}

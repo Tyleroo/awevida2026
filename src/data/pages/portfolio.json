@@ -1,0 +1,33 @@
+{
+  "description": "Portfolio of recent homes by Gabi Dalnekoff.",
+  "band": {
+    "eyebrow": "Portfolio",
+    "photos": [
+      {
+        "image": "/src/assets/photos/ce8366cf197056e49abf62c5ec32a244.jpg",
+        "alt": "The Cape, Daniel Island"
+      },
+      {
+        "image": "/src/assets/photos/54e636020abedbd64e6df14f40e98e07.jpg",
+        "alt": "Color, Daniel Island"
+      },
+      {
+        "image": "/src/assets/photos/b6a185759c6046995b6653396a29c652.jpg",
+        "alt": "Highlands"
+      },
+      {
+        "image": "/src/assets/photos/3820ef65db86e2544c6c6e16360fdbfb.jpg",
+        "alt": "Treehouse, Daniel Island"
+      },
+      {
+        "image": "/src/assets/photos/da9f9437f47a0af56313e22d1d26a645.jpg",
+        "alt": "Seabrook"
+      }
+    ]
+  },
+  "heading": "Portfolio of Recent Homes",
+  "closing": {
+    "heading": "The person behind the houses",
+    "buttonLabel": "Meet Gabi"
+  }
+}

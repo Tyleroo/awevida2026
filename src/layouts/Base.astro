@@ -13,7 +13,8 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import PhotoStrip from '../components/PhotoStrip.astro';
 import { site } from '../data/site';
-import { photo } from '../lib/photos';
+import { homes, sliderHomes } from '../data/homes';
+import { hasPhoto, photo } from '../lib/photos';
 
 interface Props {
   title?: string;
@@ -34,7 +35,7 @@ const {
   title,
   description = site.description,
   current,
-  shareImage = '68ff0be4a4c3bff997dbc604e2033e22',
+  shareImage,
   footerSocialLinks = false,
   bare = false,
   noindex = false,
@@ -42,7 +43,11 @@ const {
 
 const fullTitle = title ? `${title} | ${site.name}` : site.name;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const share = await getImage({ src: photo(shareImage), width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+// The picture shown when the page is shared: the one asked for, or else the first Home slide.
+const sharePhoto = [shareImage, sliderHomes[0]?.slider.image, homes[0]?.hero.image].find((ref) => hasPhoto(ref));
+const share = sharePhoto
+  ? await getImage({ src: photo(sharePhoto), width: 1200, height: 630, fit: 'cover', format: 'jpg' })
+  : undefined;
 ---
 
 <!doctype html>
@@ -60,7 +65,7 @@ const share = await getImage({ src: photo(shareImage), width: 1200, height: 630,
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(share.src, Astro.site)} />
+    {share && <meta property="og:image" content={new URL(share.src, Astro.site)} />}
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>

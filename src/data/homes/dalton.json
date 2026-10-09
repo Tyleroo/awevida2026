@@ -1,0 +1,164 @@
+{
+  "title": "Dalton",
+  "location": "Daniel Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/49dca0652fd83c7217b9d1d77104f837.jpg",
+    "alt": "Dalton, a white three-story Lowcountry house with double porches, blue shutters and palmettos, seen across the lawn and the backyard pool"
+  },
+  "portfolio": {
+    "order": 7,
+    "image": "/src/assets/photos/49dca0652fd83c7217b9d1d77104f837.jpg"
+  },
+  "slider": {
+    "show": true,
+    "order": 9,
+    "image": "/src/assets/photos/49dca0652fd83c7217b9d1d77104f837.jpg",
+    "label": "Daniel Island"
+  },
+  "rowGap": 20,
+  "rows": [
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/5fdd01b83eb61dc0da87ade5b5889fe3.jpg",
+          "alt": "Double porches and brick steps down to the pool, seen from a lounger on the wood deck"
+        },
+        {
+          "image": "/src/assets/photos/6f06d9c2566615304e0a9787ae7b956e.jpg",
+          "alt": "Pool with four white loungers and two cream umbrellas on the deck, under the trees"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/e29149bdac4ee740e7cc312bf7f5e71e.jpg",
+          "alt": "Loungers and umbrellas along the pool deck, with the carriage house, dining table and outdoor kitchen beyond"
+        },
+        {
+          "image": "/src/assets/photos/4c07d9ef722511ec00903531636f657d.jpg",
+          "alt": "Long teak dining table with white chairs beside the outdoor kitchen, grill and pizza oven"
+        },
+        {
+          "image": "/src/assets/photos/98b3c52e533cee3c119c312a991ee439.jpg",
+          "alt": "Outdoor kitchen bar with four white stools, a concrete fire pit and a built-in wood bench"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/4b5c544667dcac85eb2dd40900c83baf.jpg",
+          "alt": "Front porch with a rope-hung bed swing, woven chairs and a haint-blue ceiling"
+        },
+        {
+          "image": "/src/assets/photos/dece2b7e5b3d578252c8fa456321e6b6.jpg",
+          "alt": "White raised playhouse with a ladder and a snack counter with stools, on the side lawn"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/4b64f2f9735983e31670f9cd445bb877.jpg",
+          "alt": "Navy front door open to the porch and pool, under a geometric brass-and-black pendant"
+        },
+        {
+          "image": "/src/assets/photos/a231b50a63b63887fd628a9ef35ffd0e.jpg",
+          "alt": "Entry hall with white shiplap walls and a striped runner, looking into the blue office"
+        },
+        {
+          "image": "/src/assets/photos/b9398e63240c75597bf861545a547ecf.jpg",
+          "alt": "Mudroom with a built-in bench and cubbies, hexagon floor tile and a navy barn door"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/94bfeb7184aca9213ee452f671bd31e2.jpg",
+          "alt": "Living room with a marble fireplace, white sofas, a fiddle-leaf fig and an upright piano"
+        },
+        {
+          "image": "/src/assets/photos/fb7cdadd9c128d55722db5cbcc71314e.jpg",
+          "alt": "Dining room with a white table, woven rope chairs, a reclaimed-wood sideboard and a black lantern chandelier"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/2eb21c90b29d809138bb3fabe8063a6c.jpg",
+          "alt": "Office painted slate blue from walls to built-in bookshelves, with a crystal chandelier and two white desks"
+        },
+        {
+          "image": "/src/assets/photos/c074349fb147a010238d06e9342d25a8.jpg",
+          "alt": "Looking down the stairwell, heart-pine treads and white balusters turning around a black handrail"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/afdb800612294653b769730d7d04af37.jpg",
+          "alt": "Kitchen island in navy shiplap, with the breakfast nook and the living room beyond"
+        },
+        {
+          "image": "/src/assets/photos/b511dd43581ba1568a48fd0e733ad6f1.jpg",
+          "alt": "Kitchen with white cabinets, a white brick backsplash, open wood shelves and black pendants"
+        },
+        {
+          "image": "/src/assets/photos/a55ca1c96137c77677eb36a47afbeba6.jpg",
+          "alt": "Kitchen island and farmhouse sink, looking toward the breakfast nook"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/7a2968b9c44487a14bb628214f0c0805.jpg",
+          "alt": "Primary bedroom with a pale blue shiplap wall, striped linens, a weathered bench and a settee under the windows"
+        },
+        {
+          "image": "/src/assets/photos/a982ba3d783181b50c5679668fb2e5a7.jpg",
+          "alt": "Primary bedroom with its door open to the upstairs porch"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/0063a254860918b00a815f3dd4520c01.jpg",
+          "alt": "Upstairs porch with navy woven chairs around a white table, a hanging egg chair and wicker armchairs"
+        },
+        {
+          "image": "/src/assets/photos/aad2b07630ea65e3b245327358ab8046.jpg",
+          "alt": "Child's bedroom with a weathered-wood house-frame bed, pink bedding and white board-and-batten walls"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/f333f321a771b64587b595a52f30b176.jpg",
+          "alt": "Primary bathroom with a black freestanding tub in a bay of shuttered windows, under a woven rope globe pendant"
+        },
+        {
+          "image": "/src/assets/photos/adb9c8a118acb5befd2322d74834ed13.jpg",
+          "alt": "Outdoor shower with white plank walls, a wood bench and black fixtures"
+        }
+      ]
+    }
+  ]
+}

@@ -3,8 +3,8 @@
 import Photo from './Photo.astro';
 
 interface Slide { title: string; label?: string; href: string; id: string }
-interface Props { title: string; body?: string; label?: string; slides: Slide[]; interval?: number }
-const { title, body, label = 'Projects', slides, interval = 6000 } = Astro.props;
+interface Props { title: string; body?: string; label?: string; linkLabel?: string; slides: Slide[]; interval?: number }
+const { title, body, label = 'Projects', linkLabel = 'View the Home', slides, interval = 6000 } = Astro.props;
 const caption = (s: Slide) => s.title + (s.label ? ` — ${s.label}` : '');
 const first = slides[0];
 ---
@@ -27,7 +27,7 @@ const first = slides[0];
     <div class="av-heroslider__panel">
       <p class="av-heroslider__caption" aria-live="polite"><b data-num>01</b><span data-cap>{caption(first)}</span></p>
       <h1 class="av-heroslider__title">{title}</h1>
-      <div><a class="av-heroslider__link" href={first.href} data-link>View the Home<span aria-hidden="true"> →</span></a></div>
+      <div><a class="av-heroslider__link" href={first.href} data-link>{linkLabel}<span aria-hidden="true"> →</span></a></div>
     </div>
 
     {slides.length > 1 && (
