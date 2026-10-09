@@ -1,0 +1,71 @@
+---
+// Fonts are bundled with the site (no request to Google): Prompt 300/400, Mulish 700, Playfair Display 400/500.
+import '@fontsource/prompt/latin-300.css';
+import '@fontsource/prompt/latin-400.css';
+import '@fontsource/mulish/latin-700.css';
+import '@fontsource/playfair-display/latin-400.css';
+import '@fontsource/playfair-display/latin-500.css';
+import '../styles/tokens.css';
+import '../styles/components.css';
+import '../styles/pages.css';
+import { getImage } from 'astro:assets';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import PhotoStrip from '../components/PhotoStrip.astro';
+import { site } from '../data/site';
+import { photo } from '../lib/photos';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** The nav link to underline, e.g. "/portfolio/". */
+  current?: string;
+  /** Photo id used when the page is shared on social media. */
+  shareImage?: string;
+  /** The home page footer also lists the social links. */
+  footerSocialLinks?: boolean;
+  /** Bare pages (the 404) skip the header, photo strip and footer. */
+  bare?: boolean;
+}
+
+const {
+  title,
+  description = site.description,
+  current,
+  shareImage = '68ff0be4a4c3bff997dbc604e2033e22',
+  footerSocialLinks = false,
+  bare = false,
+} = Astro.props;
+
+const fullTitle = title ? `${title} | ${site.name}` : site.name;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const share = await getImage({ src: photo(shareImage), width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {bare ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(share.src, Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div class="page">
+      {!bare && <SiteHeader current={current} />}
+      <main><slot /></main>
+      {!bare && <PhotoStrip />}
+      {!bare && <SiteFooter showSocialLinks={footerSocialLinks} />}
+    </div>
+  </body>
+</html>

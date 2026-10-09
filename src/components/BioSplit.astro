@@ -1,0 +1,31 @@
+---
+import Photo from './Photo.astro';
+import Button from './Button.astro';
+
+interface Props {
+  portrait: string;
+  portraitAlt?: string;
+  eyebrow?: string;
+  name: string;
+  paragraphs: string[];
+  cta?: { label: string; href: string };
+}
+const { portrait, portraitAlt = '', eyebrow, name, paragraphs, cta } = Astro.props;
+---
+
+<section class="av-bio av-bio--tight">
+  <div class="av-bio__band"></div>
+  <div class="av-bio__figure">
+    <div class="av-bio__portrait">
+      <Photo id={portrait} alt={portraitAlt} sizes="(max-width: 960px) 90vw, 420px" max={1200} class="av-fill" />
+    </div>
+  </div>
+  <div class="av-bio__inner">
+    <div class="av-bio__copy">
+      {eyebrow && <p class="av-bio__eyebrow">{eyebrow}</p>}
+      <h2 class="av-bio__name">{name}</h2>
+      {paragraphs.map((text) => <p class="av-bio__para">{text}</p>)}
+      {cta && <div class="av-bio__actions"><Button href={cta.href}>{cta.label}</Button></div>}
+    </div>
+  </div>
+</section>

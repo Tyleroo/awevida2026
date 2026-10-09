@@ -1,0 +1,96 @@
+---
+// The Home hero: one slide per finished home, each linking to that home's page.
+import Photo from './Photo.astro';
+
+interface Slide { title: string; label?: string; href: string; id: string }
+interface Props { title: string; body?: string; label?: string; slides: Slide[]; interval?: number }
+const { title, body, label = 'Projects', slides, interval = 6000 } = Astro.props;
+const caption = (s: Slide) => s.title + (s.label ? ` — ${s.label}` : '');
+const first = slides[0];
+---
+
+<section class="av-heroslider" aria-roledescription="carousel" aria-label={label} tabindex="0" data-heroslider data-interval={interval}>
+  <div class="av-heroslider__stage">
+    {slides.map((s, i) => (
+      <div
+        class="av-heroslider__frame"
+        data-active={i === 0 ? 'true' : 'false'}
+        data-caption={caption(s)}
+        data-href={s.href}
+        aria-hidden={i === 0 ? undefined : 'true'}
+      >
+        <Photo id={s.id} alt={s.title + (s.label ? `, ${s.label}` : '')} sizes="(max-width: 720px) 180vw, 100vw" class="av-fill" eager={i === 0} />
+      </div>
+    ))}
+
+    <div class="av-heroslider__bar">
+    <div class="av-heroslider__panel">
+      <p class="av-heroslider__caption" aria-live="polite"><b data-num>01</b><span data-cap>{caption(first)}</span></p>
+      <h1 class="av-heroslider__title">{title}</h1>
+      <div><a class="av-heroslider__link" href={first.href} data-link>View the Home<span aria-hidden="true"> →</span></a></div>
+    </div>
+
+    {slides.length > 1 && (
+      <div class="av-heroslider__controls">
+        <button type="button" class="av-heroslider__arrow" aria-label="Previous photograph" data-prev>←</button>
+        <ul class="av-heroslider__dots">
+          {slides.map((_, i) => (
+            <li><button type="button" class="av-heroslider__dot" aria-current={i === 0 ? 'true' : 'false'} aria-label={`Show photograph ${i + 1}`}></button></li>
+          ))}
+        </ul>
+        <button type="button" class="av-heroslider__arrow" aria-label="Next photograph" data-next>→</button>
+      </div>
+    )}
+    </div>
+  </div>
+  {body && <p class="av-heroslider__standfirst">{body}</p>}
+</section>
+
+<script>
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll<HTMLElement>('[data-heroslider]').forEach((root) => {
+    const frames = [...root.querySelectorAll<HTMLElement>('.av-heroslider__frame')];
+    const dots = [...root.querySelectorAll<HTMLButtonElement>('.av-heroslider__dot')];
+    const num = root.querySelector<HTMLElement>('[data-num]');
+    const cap = root.querySelector<HTMLElement>('[data-cap]');
+    const link = root.querySelector<HTMLAnchorElement>('[data-link]');
+    const count = frames.length;
+    const interval = Number(root.dataset.interval) || 6000;
+    let index = 0;
+    let paused = false;
+
+    const show = (n: number) => {
+      index = ((n % count) + count) % count;
+      frames.forEach((frame, i) => {
+        const on = i === index;
+        frame.dataset.active = String(on);
+        if (on) frame.removeAttribute('aria-hidden');
+        else frame.setAttribute('aria-hidden', 'true');
+      });
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', i === index ? 'true' : 'false'));
+      if (num) num.textContent = String(index + 1).padStart(2, '0');
+      if (cap) cap.textContent = frames[index].dataset.caption ?? '';
+      if (link) link.href = frames[index].dataset.href ?? '#';
+    };
+
+    root.querySelector('[data-prev]')?.addEventListener('click', () => show(index - 1));
+    root.querySelector('[data-next]')?.addEventListener('click', () => show(index + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); }
+    });
+
+    // Rotation waits while someone is hovering over or tabbing through the slider.
+    root.addEventListener('mouseenter', () => { paused = true; });
+    root.addEventListener('mouseleave', () => { paused = false; });
+    root.addEventListener('focusin', () => { paused = true; });
+    root.addEventListener('focusout', () => { paused = false; });
+
+    if (!reduce && count > 1 && interval > 0) {
+      window.setInterval(() => { if (!paused && !document.hidden) show(index + 1); }, interval);
+    }
+  });
+</script>

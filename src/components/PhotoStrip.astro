@@ -1,0 +1,18 @@
+---
+// The band of rooms that scrolls left to right, on a loop, above the footer of every page.
+import Photo from './Photo.astro';
+import { strip } from '../data/site';
+
+// The list is doubled so the animation can slide exactly one copy's width and land back at its start.
+const loop = [...strip, ...strip];
+---
+
+<div class="av-strip" role="group" aria-label="Rooms from recent homes">
+  <div class="av-strip__track">
+    {loop.map((p, i) => (
+      <div class="av-strip__cell" aria-hidden={i >= strip.length ? 'true' : undefined}>
+        <Photo id={p.id} alt={i >= strip.length ? '' : p.alt} sizes="330px" max={800} class="av-fill" />
+      </div>
+    ))}
+  </div>
+</div>

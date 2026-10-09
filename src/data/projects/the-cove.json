@@ -1,0 +1,200 @@
+{
+  "slug": "the-cove",
+  "title": "The Cove",
+  "location": "Lake Keowee, South Carolina",
+  "intro": "",
+  "hero": {
+    "id": "68ff0be4a4c3bff997dbc604e2033e22",
+    "alt": "The Cove living and dining room, with a long reclaimed-wood table, a geometric chandelier and glass doors to the screened porch"
+  },
+  "rows": [
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "55d4063d57aff1db27f29e7ac9187144",
+          "alt": "Screened porch with blue-cushioned wood-frame furniture overlooking the trees",
+          "w": 589.0,
+          "h": 391.0
+        },
+        {
+          "id": "d0aa612d5e4c8390ce4507be86dfd914",
+          "alt": "Screened porch with a high-top dining table and stools under a dark wood ceiling",
+          "w": 591.0,
+          "h": 391.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "610d93e78c46e4db7bacc971a532ae56",
+          "alt": "Adirondack chairs around a fire pit beneath the deck, with the lake through the trees",
+          "w": 789.0,
+          "h": 526.0
+        },
+        {
+          "id": "4b2f215aeac53ff0c95bd700037aad47",
+          "alt": "View through the trees down to the cove and its covered boat docks",
+          "w": 391.0,
+          "h": 526.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "b05c788a9b9fbda27007c127114f7fcd",
+          "alt": "Living room facing the fireplace, with a sunset photograph above the mantel and a canoe on the wall",
+          "w": 592.0,
+          "h": 391.0
+        },
+        {
+          "id": "9638caced134050bfe8a1af69a9464b3",
+          "alt": "Living room with a white sectional, a reclaimed-wood coffee table and black-framed windows to the trees",
+          "w": 588.0,
+          "h": 391.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "32ca7533287a96dc520d2cd2ddd49dd3",
+          "alt": "Den with a shuffleboard table, a white sofa and the staircase",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "f5efdb4ac6bc31199ef2924881228b14",
+          "alt": "Living room with a striped rug, open to the dining table beneath a canoe",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "60930c832de9c581b545d446f9d26a49",
+          "alt": "Kitchen with a dark island, white stools, open shelving and reclaimed-wood shutter doors",
+          "w": 1200.0,
+          "h": 794.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "10d20ed8d530d561e0b1faaa8670c3a6",
+          "alt": "Long reclaimed-wood dining table with black wishbone chairs beside a driftwood-framed mirror",
+          "w": 592.0,
+          "h": 391.0
+        },
+        {
+          "id": "5d2d47c718d96f92c4e94c066be0e3aa",
+          "alt": "Dining table and living room together, with a geometric chandelier and the fireplace beyond",
+          "w": 588.0,
+          "h": 391.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "b6f2b2a8eaa560edef269c8246f0a216",
+          "alt": "Bedroom with a brass four-poster canopy bed and a rattan chair",
+          "w": 589.0,
+          "h": 392.0
+        },
+        {
+          "id": "174bd442e81694487c3c7dc99fd82b73",
+          "alt": "Primary bedroom with a charcoal shiplap wall, a live-edge coffee table and glass doors to the deck",
+          "w": 591.0,
+          "h": 392.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "d571b2586ec9a3278494e111edcce0e5",
+          "alt": "Primary bedroom, wider view toward the glass doors and leather chairs",
+          "w": 544.0,
+          "h": 422.0
+        },
+        {
+          "id": "f21e2d96b5988f979cbce2c8cacc1884",
+          "alt": "Bedroom with a fireplace, built-in shelving, a pair of leopard prints and a carved wood panel",
+          "w": 636.0,
+          "h": 422.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "b7d1190e3175f8196361c653cc9d4685",
+          "alt": "Twin bedroom with arched white headboards and pale blue bedding",
+          "w": 589.0,
+          "h": 391.0
+        },
+        {
+          "id": "8e2a7082e9f8baf83e1fca404e50a1e7",
+          "alt": "Twin bedroom with reclaimed-wood headboards and navy and cream bedding",
+          "w": 591.0,
+          "h": 391.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "9c076f4faa6cccac2a31e10053ef1216",
+          "alt": "Shower with wood-slat tile walls and a pebble stone floor",
+          "w": 272.0,
+          "h": 407.0
+        },
+        {
+          "id": "db015ffe832ac5bf8ad7f8eedca6529e",
+          "alt": "Bathroom with a dark vertical-tile shower and a built-in bench",
+          "w": 615.0,
+          "h": 407.0
+        },
+        {
+          "id": "6dea63decc30c6b50db4b2b1c3b00f09",
+          "alt": "View through to a bathroom with a freestanding tub and pebble floor",
+          "w": 273.0,
+          "h": 407.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "2b52078f85d6e164df5fa3c3266c9ae9",
+          "alt": "Bathroom with a double vanity, brass fixtures and a freestanding tub",
+          "w": 816.0,
+          "h": 541.0
+        },
+        {
+          "id": "9cde1265397ebbac48316ef4f8b9c3f0",
+          "alt": "Shower with white hexagon tile and a glass door",
+          "w": 364.0,
+          "h": 541.0
+        }
+      ]
+    }
+  ],
+  "rowGap": 20
+}

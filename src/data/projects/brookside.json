@@ -1,0 +1,138 @@
+{
+  "slug": "brookside",
+  "title": "Brookside",
+  "location": "Highlands, North Carolina",
+  "intro": "",
+  "hero": {
+    "id": "6a6c3540163ba7acf77f9f8c5e863e58",
+    "alt": "Brookside primary bedroom under a vaulted white plank ceiling, with a pair of leather chairs, linen curtains and glass doors to the deck and the trees"
+  },
+  "rows": [
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "3c40f3097f103e55d0f43ae2117c2d79",
+          "alt": "Gray boardwalk through the rhododendrons to a stone fire pit in the woods",
+          "w": 387.0,
+          "h": 258.0
+        },
+        {
+          "id": "812bbf5e9809591c09ce4834aad57140",
+          "alt": "Screened porch with skylights, a reclaimed-wood coffee table and the brook below",
+          "w": 387.0,
+          "h": 258.0
+        },
+        {
+          "id": "4ceedcf6f61a2b044b34a916a81f9a5e",
+          "alt": "Screened porch with a reclaimed-beam dining table, white chairs and rockers facing the brook",
+          "w": 386.0,
+          "h": 258.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "a2817923eca37e1608d89ca14fa653b3",
+          "alt": "Great room beneath a vaulted gray plank ceiling, with gray sofas, leather chairs, a live-edge coffee table and tall windows into the trees",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "2070c0053e84f743c1e9075e7320d00a",
+          "alt": "View across the kitchen counter to the round dining table, antler chandelier and stone fireplace",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "22a136df7c1d8c114d079cd238b188eb",
+          "alt": "Entry with a reclaimed-beam console and mirror on a white plank wall, between two sconces, with the kitchen beyond",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "a199bd063f93bffa8e496a8a8cee1eab",
+          "alt": "Kitchen with a charcoal breakfast bar, four stools, zellige tile and weathered ceiling beams",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "7230396f50aea872c42debb54b3ad4f7",
+          "alt": "Kitchen island and charcoal cabinets, looking through to the dining table and stone fireplace",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "acca7036895544a97ae09b96bfb68458",
+          "alt": "Kitchen from the bar stools, with glass pendants and an antique wood cabinet on the counter",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "d405dcc08b70eeb755e94a4a103a69d8",
+          "alt": "Bedroom with a reclaimed-wood bed, striped linens and striped curtains",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "55ef3a26cc689b173c18da7047aa4c28",
+          "alt": "Bedroom with a white spindle bed, pink bedding and vintage snowshoes on the wall",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "b3158f829d676cfeae52f83023fefdbd",
+          "alt": "Twin bedroom with scalloped striped headboards and soft gray bedding",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "124ae272063afed1d9d5527a8935cbc5",
+          "alt": "Walk-in closet with white open shelving, a woven pendant and a bright kilim rug",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    },
+    {
+      "kind": "fit",
+      "items": [
+        {
+          "id": "2e4207db3e94f9cd1bbca49d932b694a",
+          "alt": "Primary bathroom with a freestanding tub, a glass shower in pale green tile and a beaded chandelier",
+          "w": 590.0,
+          "h": 393.0
+        },
+        {
+          "id": "e1694adf9248e265ea2319e13ee7e612",
+          "alt": "Bathroom with a sunburst wood mirror, brass fixtures and geometric floor tile",
+          "w": 590.0,
+          "h": 393.0
+        }
+      ]
+    }
+  ],
+  "rowGap": 20
+}

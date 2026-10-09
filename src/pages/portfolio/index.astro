@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import GalleryHero from '../../components/GalleryHero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Button from '../../components/Button.astro';
+import { projects, projectUrl } from '../../data/projects';
+
+const slides = [
+  { id: 'ce8366cf197056e49abf62c5ec32a244', alt: 'The Cape, Daniel Island' },
+  { id: '54e636020abedbd64e6df14f40e98e07', alt: 'Color, Daniel Island' },
+  { id: 'b6a185759c6046995b6653396a29c652', alt: 'Highlands' },
+  { id: '3820ef65db86e2544c6c6e16360fdbfb', alt: 'Treehouse, Daniel Island' },
+  { id: 'da9f9437f47a0af56313e22d1d26a645', alt: 'Seabrook' },
+];
+---
+
+<Base title="Portfolio" description="Portfolio of recent homes by Gabi Dalnekoff." current="/portfolio/" shareImage="ce8366cf197056e49abf62c5ec32a244">
+  <GalleryHero eyebrow="Portfolio" slides={slides} interval={6500} label="Photographs of finished homes" />
+
+  <section class="band band--pale">
+    <h1 class="band__title">Portfolio of Recent Homes</h1>
+  </section>
+
+  <section class="portfolio-grid">
+    <div class="wrap">
+      <div class="av-grid">
+        {projects.map((p) => (
+          <ProjectCard href={projectUrl(p.slug)} title={p.title} location={p.location} image={p.card} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--sage">
+    <h2 class="band__title">The person behind the houses</h2>
+    <Button href="/about/" variant="light">Meet Gabi</Button>
+  </section>
+</Base>

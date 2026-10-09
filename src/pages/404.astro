@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import logo from '../assets/logo.png';
+---
+
+<Base title="Page Not Found" bare>
+  <div class="notfound">
+    <a href="/" aria-label="AweVida home"><Image src={logo} alt="AweVida" width={342} class="notfound__logo" /></a>
+    <div class="notfound__rule"></div>
+    <h1>Page Not Found</h1>
+    <p>The page you were looking for isn't here. It may have moved when we refreshed the site.</p>
+    <Button href="/">Back to Home</Button>
+  </div>
+</Base>

@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import BioSplit from '../components/BioSplit.astro';
+import { projectUrl } from '../data/projects';
+
+// One slide per finished home, in the order they rotate.
+const slides = [
+  { title: 'The Cove', href: projectUrl('the-cove'), id: '68ff0be4a4c3bff997dbc604e2033e22' },
+  { title: 'The Treehouse', href: projectUrl('the-treehouse'), id: '50b711c75e569b7eb6b3ffa75f2fadde' },
+  { title: 'Bubbly', href: projectUrl('bubbly'), id: '6778366ed25d9822772f938db971aa3a' },
+  { title: 'The Cape', label: 'Daniel Island', href: projectUrl('the-cape'), id: 'ce8366cf197056e49abf62c5ec32a244' },
+  { title: 'Bali', href: projectUrl('bali'), id: '27f367a1335fce43801688c38d465ab1' },
+  { title: 'Soul Cottage', label: 'Highlands, NC', href: projectUrl('soul-cottage'), id: 'e1ff942a10c69c76e317aba64e8ec849' },
+  { title: 'Brookside', label: 'Highlands, NC', href: projectUrl('brookside'), id: '6a6c3540163ba7acf77f9f8c5e863e58' },
+  { title: 'Color', label: 'Daniel Island', href: projectUrl('color'), id: '54e636020abedbd64e6df14f40e98e07' },
+  { title: 'Dalton', label: 'Daniel Island', href: projectUrl('dalton'), id: '49dca0652fd83c7217b9d1d77104f837' },
+];
+
+// The line breaks here are deliberate: on desktop the sentence sits on three lines.
+const standfirst =
+  'Fifteen years ago, as a side business and to fulfill an\nincurable itch for expressing her creativity through exciting\nhouse projects, Gabi got into residential real estate.';
+
+const bio = [
+  'Gabi Dalnekoff is a Brazilian-born business woman with a drive for living a multifaceted life. She has excelled in the corporate world often building entirely new companies from the ground up. Fifteen years ago, as a side business and to fulfill an incurable itch for expressing her creativity through exciting house projects, Gabi got into residential real estate. She has been buying, renovating, and upgrading her real estate portfolio ever since. Gabi credits property investment as what has afforded her the freedom to make her own schedule and live life on her terms.',
+];
+---
+
+<Base current="/" footerSocialLinks>
+  <div class="home">
+    <HeroSlider title="Our Latest Projects" body={standfirst} label="Finished homes" slides={slides} interval={6000} />
+    <BioSplit
+      portrait="54e953989acadd4be9193ec87e8c10bb"
+      portraitAlt="Gabi Dalnekoff standing beside a wooden front door"
+      eyebrow="Meet Gabi"
+      name="Gabi Dalnekoff"
+      paragraphs={bio}
+      cta={{ label: 'Meet Gabi', href: '/about/' }}
+    />
+  </div>
+</Base>

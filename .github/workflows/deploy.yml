@@ -1,0 +1,65 @@
+# Builds the site and uploads it to Cloudways whenever something is pushed to main.
+# It can also be run by hand from the repo's Actions tab ("Run workflow").
+#
+# Needs three repository secrets (Settings > Secrets and variables > Actions):
+#   SFTP_HOST      the Cloudways server's public IP
+#   SFTP_USER      the application's SFTP username
+#   SFTP_PASSWORD  the application's SFTP password
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deploy at a time; a newer push waits for the running one to finish.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SFTP_HOST: ${{ secrets.SFTP_HOST }}
+      SFTP_USER: ${{ secrets.SFTP_USER }}
+      LFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Resized photos are kept between runs, so only new or changed photos are processed.
+      - uses: actions/cache@v4
+        with:
+          path: node_modules/.astro
+          key: astro-images-${{ hashFiles('src/assets/photos/**') }}
+          restore-keys: astro-images-
+
+      - run: npm run build
+
+      - name: Skip upload (secrets not set yet)
+        if: ${{ env.SFTP_HOST == '' }}
+        run: echo "::warning::The site built, but SFTP_HOST, SFTP_USER and SFTP_PASSWORD are not set, so nothing was uploaded."
+
+      - name: Upload to Cloudways
+        if: ${{ env.SFTP_HOST != '' }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+          # Files in _astro have a fingerprint in their name, so one that already exists never needs re-sending.
+          # Everything else (the pages) is small and is sent every time.
+          lftp -c "
+            set cmd:fail-exit yes;
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            set net:timeout 30;
+            open --env-password -u '$SFTP_USER' sftp://$SFTP_HOST;
+            mirror -R --ignore-time --parallel=6 dist/_astro public_html/_astro;
+            mirror -R --parallel=4 --exclude _astro/ dist public_html;
+          "

@@ -1,0 +1,14 @@
+---
+import Photo from './Photo.astro';
+
+interface Props { href: string; title: string; location?: string; image: string }
+const { href, title, location, image } = Astro.props;
+---
+
+<a class="av-card" href={href} aria-label={location ? `${title}, ${location}` : title}>
+  <div class="av-card__media">
+    <Photo id={image} alt="" sizes="(max-width: 720px) 100vw, (max-width: 1000px) 66vw, 570px" max={1200} class="av-fill" />
+  </div>
+  <div class="av-card__scrim" aria-hidden="true"></div>
+  <div class="av-card__body"><h2 class="av-card__title">{title}</h2></div>
+</a>

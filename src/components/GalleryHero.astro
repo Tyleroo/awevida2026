@@ -1,0 +1,40 @@
+---
+// A band of photographs that cross-fade with a slow zoom.
+import Photo from './Photo.astro';
+
+interface Slide { id: string; alt: string; position?: string }
+interface Props { slides: Slide[]; interval?: number; eyebrow?: string; label?: string }
+const { slides, interval = 6500, eyebrow, label = 'Photographs' } = Astro.props;
+---
+
+<section class="av-galleryhero" aria-roledescription="carousel" aria-label={label} data-galleryhero data-interval={interval}>
+  <div class="av-galleryhero__stage">
+    {slides.map((s, i) => (
+      <div class="av-galleryhero__frame" data-active={i === 0 ? 'true' : 'false'} aria-hidden={i === 0 ? undefined : 'true'}>
+        <Photo id={s.id} alt={s.alt} sizes="(max-width: 720px) 160vw, 100vw" class="av-fill" eager={i === 0} position={s.position} />
+      </div>
+    ))}
+    {eyebrow && (
+      <div class="av-galleryhero__text"><p class="av-galleryhero__eyebrow">{eyebrow}</p></div>
+    )}
+  </div>
+</section>
+
+<script>
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-galleryhero]').forEach((root) => {
+    const frames = [...root.querySelectorAll<HTMLElement>('.av-galleryhero__frame')];
+    const interval = Number(root.dataset.interval) || 6500;
+    if (reduce || frames.length < 2) return;
+    let index = 0;
+    window.setInterval(() => {
+      index = (index + 1) % frames.length;
+      frames.forEach((frame, i) => {
+        const on = i === index;
+        frame.dataset.active = String(on);
+        if (on) frame.removeAttribute('aria-hidden');
+        else frame.setAttribute('aria-hidden', 'true');
+      });
+    }, interval);
+  });
+</script>

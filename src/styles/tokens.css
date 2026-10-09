@@ -1,0 +1,45 @@
+/* AweVida design tokens — colours, spacing, radii and type, taken from the AweVida design system. */
+:root {
+  --sage-700: #73a198;
+  --sage-900: #4c7a70;
+  --sage-500: #a6c3bd;
+  --sage-300: #c6d8d4;
+  --vida-green: #9bbb9e;
+  --taupe: #99887f;
+  --mist: #e6e4e6;
+  --surface: #ffffff;
+  --surface-alt: #f3f5f6;
+  --ink: #9b9b9a;
+  --ink-strong: #333333;
+  --on-sage: #ffffff;
+  --overlay-sage: rgba(166, 195, 189, 0.64);
+  --overlay-mist: rgba(243, 245, 246, 0.82);
+  --focus-ring: var(--sage-900);
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-25: 25px;
+  --space-30: 30px;
+  --space-32: 32px;
+  --space-50: 50px;
+  --space-60: 60px;
+  --space-96: 96px;
+  --space-128: 128px;
+  --radius-pill: 100px;
+  --radius-sm: 4px;
+  --radius-lg: 50px;
+  --radius-round: 50%;
+  --shadow-card: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+  --font-display: Prompt, sans-serif;
+  --font-ui: Mulish, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  /* Page gutter: 50px on desktop (as designed), tighter on tablets and phones. */
+  --gutter: 50px;
+  /* The design is drawn on a 1440px frame; on wider screens, anchored pieces stay inside a centred 1440px frame. */
+  --frame-edge: max(0px, calc(50% - 720px));
+}
+
+@media (max-width: 900px) { :root { --gutter: 25px; } }
+@media (max-width: 480px) { :root { --gutter: 16px; } }

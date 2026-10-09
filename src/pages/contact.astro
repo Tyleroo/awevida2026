@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import Button from '../components/Button.astro';
+import { site } from '../data/site';
+
+const endpoint = `https://formspree.io/f/${site.formspreeId}`;
+---
+
+<Base title="Contact" description="Have a question or compliment? Get in touch with AweVida." current="/contact/" shareImage="b6a185759c6046995b6653396a29c652">
+  <section class="contact">
+    <div class="contact__inner">
+      <div class="contact__photo">
+        <Photo id="b6a185759c6046995b6653396a29c652" alt="" sizes="(max-width: 760px) 100vw, 900px" class="av-fill" eager />
+      </div>
+
+      <div class="contact__body">
+        <h1>Contact Us</h1>
+        <p class="contact__lede">Have a question or compliment? Let us know in the form below.</p>
+
+        <form class="av-form" action={endpoint} method="POST" data-contact-form>
+          <div class="av-field">
+            <label class="av-field__label" for="contact-name">Name</label>
+            <input class="av-field__input" id="contact-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+          </div>
+          <div class="av-field">
+            <label class="av-field__label" for="contact-email">Email Address</label>
+            <input class="av-field__input" id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+          <div class="av-field">
+            <label class="av-field__label" for="contact-message">Message</label>
+            <textarea class="av-field__input" id="contact-message" name="message" rows="6" placeholder="Whatever you would like to say." required></textarea>
+          </div>
+          <!-- Spam trap: people never see or fill this in; Formspree discards submissions that do. -->
+          <div class="av-form__trap" aria-hidden="true">
+            <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+          </div>
+          <input type="hidden" name="_subject" value="New message from awevida.com" />
+          <div class="av-form__actions"><Button type="submit">Send Inquiry</Button></div>
+          <p class="av-form__status" role="status" aria-live="polite" data-status></p>
+        </form>
+
+        <div class="contact__details">
+          {site.email && (
+            <div>
+              <h2>Email</h2>
+              <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+            </div>
+          )}
+          {site.basedIn && (
+            <div>
+              <h2>Based in</h2>
+              <p>{site.basedIn}</p>
+            </div>
+          )}
+          {site.follow.href && (
+            <div>
+              <h2>Follow</h2>
+              <p><a href={site.follow.href} target="_blank" rel="noopener">{site.follow.handle}</a></p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Sends the form to Formspree in the background and shows the result on the page.
+  // If JavaScript is unavailable the form still works: it posts normally and Formspree shows its own thank-you page.
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  const status = form?.querySelector<HTMLElement>('[data-status]');
+  const button = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!status || !button) return;
+    button.disabled = true;
+    status.dataset.state = 'sending';
+    status.textContent = 'Sending…';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (!response.ok) throw new Error(String(response.status));
+      form.reset();
+      status.dataset.state = 'sent';
+      status.textContent = 'Thank you — your message has been sent.';
+    } catch {
+      status.dataset.state = 'error';
+      status.textContent = 'Sorry, something went wrong and your message was not sent. Please try again in a moment.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>

@@ -1,0 +1,36 @@
+---
+// One photograph, resized to several widths and served as WebP.
+import { Image } from 'astro:assets';
+import { photo, widthsUpTo } from '../lib/photos';
+
+interface Props {
+  id: string;
+  alt: string;
+  /** How wide the photo is shown, as an HTML `sizes` value, so browsers pick the right file. */
+  sizes: string;
+  /** Largest width worth generating for this spot. */
+  max?: number;
+  class?: string;
+  /** Load straight away (for the first thing on the page) instead of lazily. */
+  eager?: boolean;
+  /** CSS object-position, for cropped photos that should favour one part of the picture. */
+  position?: string;
+}
+
+const { id, alt, sizes, max = 2000, class: className, eager = false, position } = Astro.props;
+const src = photo(id);
+---
+
+<Image
+  src={src}
+  alt={alt}
+  widths={widthsUpTo(max)}
+  width={480}
+  sizes={sizes}
+  class={className}
+  loading={eager ? 'eager' : 'lazy'}
+  fetchpriority={eager ? 'high' : undefined}
+  decoding="async"
+  quality={78}
+  style={position ? `object-position: ${position};` : undefined}
+/>

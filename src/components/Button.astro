@@ -1,0 +1,9 @@
+---
+interface Props { href?: string; variant?: 'solid' | 'outline' | 'light'; type?: 'button' | 'submit'; external?: boolean }
+const { href, variant = 'solid', type = 'button', external = false } = Astro.props;
+const rel = external ? 'noopener' : undefined;
+---
+
+{href
+  ? <a class={`av-btn av-btn--${variant}`} href={href} target={external ? '_blank' : undefined} rel={rel}><slot /></a>
+  : <button class={`av-btn av-btn--${variant}`} type={type}><slot /></button>}

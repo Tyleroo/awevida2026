@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import { nav } from '../data/site';
+
+interface Props { current?: string }
+const { current } = Astro.props;
+---
+
+<header class="av-header">
+  <a class="av-header__home" href="/" aria-label="AweVida home">
+    <Image src={logo} alt="AweVida" width={306} class="av-header__logo" loading="eager" />
+  </a>
+  <nav aria-label="Main">
+    <ul class="av-header__nav">
+      {nav.map((link) => (
+        <li>
+          <a class="av-header__link" href={link.href} aria-current={link.href === current ? 'page' : undefined}>{link.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

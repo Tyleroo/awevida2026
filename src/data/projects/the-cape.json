@@ -1,0 +1,193 @@
+{
+  "slug": "the-cape",
+  "title": "The Cape",
+  "location": "Daniel Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "id": "ce8366cf197056e49abf62c5ec32a244",
+    "alt": "The Cape living room, with a shiplap fireplace surround and a painting above the mantel"
+  },
+  "rows": [
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "8ba7fc724b78c237f665425a0cf9567a",
+          "alt": "Front entry with glass doors and a driftwood bench",
+          "w": 1200,
+          "h": 560.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "2c42cb859d8914d39f71b68cd4197705",
+          "alt": "Screened porch with a white sectional",
+          "w": 590.0,
+          "h": 420.0
+        },
+        {
+          "id": "ea64f498a99af4400771cded6814a319",
+          "alt": "Backyard pool",
+          "w": 590.0,
+          "h": 420.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "b19530416901f1403a38b66615896d11",
+          "alt": "Aerial view of the backyard and pool",
+          "w": 1200,
+          "h": 560.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "a54a0080caa5ed1f94629ce3266339d0",
+          "alt": "Sitting room with striped chairs and a boat painting",
+          "w": 590.0,
+          "h": 420.0
+        },
+        {
+          "id": "3c86c29958fcf840069f0c3b31891815",
+          "alt": "Upstairs hallway with a rope-hung bed swing",
+          "w": 590.0,
+          "h": 420.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "6ffd6a57146ce887653c4b0f810587a9",
+          "alt": "Home office with blue-gray built-ins and a wood ceiling",
+          "w": 590.0,
+          "h": 420.0
+        },
+        {
+          "id": "e01f59ab88763d5ca29772adbc22cc9c",
+          "alt": "Window-seat reading nook",
+          "w": 590.0,
+          "h": 420.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "3765ddab70c6bdbaac683104f20c5025",
+          "alt": "Kitchen, wide view",
+          "w": 1200,
+          "h": 560.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "4adf3172b9e7c38e0cb1280e2dcb1575",
+          "alt": "Dining area with a cluster of paper-lantern pendants, open to the kitchen",
+          "w": 386.67,
+          "h": 360.0
+        },
+        {
+          "id": "6494cf4083ad9216e6a3561ef7c6e0fc",
+          "alt": "Kitchen island with six counter stools",
+          "w": 386.67,
+          "h": 360.0
+        },
+        {
+          "id": "5a4d6489cc535a51a1f98a4a293e13c5",
+          "alt": "Breakfast nook with a round table",
+          "w": 386.67,
+          "h": 360.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "cd013b8fc941a8a8d5638a9fcb8d1894",
+          "alt": "Butler's pantry and wet bar",
+          "w": 1200,
+          "h": 560.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "fff8714bd99c806cf9a05b062d0c5b19",
+          "alt": "Primary bedroom with a vaulted shiplap ceiling",
+          "w": 1200,
+          "h": 560.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "ff69d083b7adaba5823e63df2d53f5bf",
+          "alt": "Bedroom with pink sunburst closet doors",
+          "w": 590.0,
+          "h": 420.0
+        },
+        {
+          "id": "408da4f96811a7bd5399f3708ac160dc",
+          "alt": "Walk-in closet with an island and a window seat",
+          "w": 590.0,
+          "h": 420.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "c8742de008e1f59c1aa39d6ba408a435",
+          "alt": "Kids bedroom with a built-in storage bed",
+          "w": 590.0,
+          "h": 420.0
+        },
+        {
+          "id": "2bf1baa269601b4defc53d901e04b9da",
+          "alt": "Second kids room with bean-bag chairs",
+          "w": 590.0,
+          "h": 420.0
+        }
+      ]
+    },
+    {
+      "kind": "crop",
+      "items": [
+        {
+          "id": "d8220a3b0e135efc2598e2ab449b45a2",
+          "alt": "Bathroom with a navy vanity and penny tile",
+          "w": 590.0,
+          "h": 420.0
+        },
+        {
+          "id": "85e848698b9b41518409deb5c739d267",
+          "alt": "Powder bathroom with leaf-print wallpaper",
+          "w": 590.0,
+          "h": 420.0
+        }
+      ]
+    }
+  ],
+  "rowGap": 40
+}
