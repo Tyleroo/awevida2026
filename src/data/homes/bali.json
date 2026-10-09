@@ -7,12 +7,12 @@
     "alt": "Bali living room with a beamed plank ceiling, a white brick fireplace and built-in shelving"
   },
   "portfolio": {
-    "order": 3,
+    "order": 2,
     "image": "/src/assets/photos/8249b2ecb7598afedbf0f76da10e8f43.jpg"
   },
   "slider": {
     "show": true,
-    "order": 5,
+    "order": 2,
     "image": "/src/assets/photos/27f367a1335fce43801688c38d465ab1.jpg"
   },
   "rowGap": 20,

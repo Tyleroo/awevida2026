@@ -3,17 +3,17 @@
   "location": "Daniel Island, South Carolina",
   "intro": "",
   "hero": {
-    "image": "/src/assets/photos/50b711c75e569b7eb6b3ffa75f2fadde.jpg",
-    "alt": "The Treehouse at dusk, a two-story white board-and-batten home framed by palms and live oaks"
+    "image": "/src/assets/photos/c6ead3c834e739d1a6e26013935b239c.jpg",
+    "alt": "The Treehouse dining room, with a long wood table under a white dome pendant, tall black-framed windows and a fiddle-leaf fig"
   },
   "portfolio": {
     "order": 8,
-    "image": "/src/assets/photos/50b711c75e569b7eb6b3ffa75f2fadde.jpg"
+    "image": "/src/assets/photos/c6ead3c834e739d1a6e26013935b239c.jpg"
   },
   "slider": {
-    "show": true,
+    "show": false,
     "order": 2,
-    "image": "/src/assets/photos/50b711c75e569b7eb6b3ffa75f2fadde.jpg",
+    "image": "/src/assets/photos/c6ead3c834e739d1a6e26013935b239c.jpg",
     "label": ""
   },
   "rowGap": 20,
@@ -118,10 +118,6 @@
         {
           "image": "/src/assets/photos/96f50035ff690b729e42dd4585fa322f.jpg",
           "alt": "White island with woven baskets beneath a white pendant"
-        },
-        {
-          "image": "/src/assets/photos/c6ead3c834e739d1a6e26013935b239c.jpg",
-          "alt": "Dining room with tall black-framed windows and a fiddle-leaf fig"
         }
       ]
     },

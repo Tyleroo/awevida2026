@@ -11,7 +11,7 @@
     "image": "/src/assets/photos/54e636020abedbd64e6df14f40e98e07.jpg"
   },
   "slider": {
-    "show": true,
+    "show": false,
     "order": 8,
     "image": "/src/assets/photos/54e636020abedbd64e6df14f40e98e07.jpg",
     "label": "Daniel Island"

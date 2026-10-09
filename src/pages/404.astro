@@ -9,7 +9,7 @@ import page from '../data/pages/not-found.json';
 import { homes, homeUrl } from '../data/homes';
 
 // Four homes to offer instead: these if they exist, topped up from the Portfolio order.
-const preferred = ['the-cove', 'dalton', 'the-cape', 'soul-cottage'];
+const preferred = ['the-cove', 'dalton', 'the-cape', 'soul'];
 const picks = [
   ...preferred.map((slug) => homes.find((home) => home.slug === slug)).filter((home) => home !== undefined),
   ...homes.filter((home) => !preferred.includes(home.slug)),

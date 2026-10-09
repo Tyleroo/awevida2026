@@ -6,6 +6,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://awevida.com',
   trailingSlash: 'always',
+  // Old addresses that should forward to a home's new address after a rename.
+  redirects: { '/portfolio/soul-cottage': '/portfolio/soul/' },
   integrations: [sitemap({ filter: (page) => !page.includes('/404') })],
   image: { service: { entrypoint: 'astro/assets/services/sharp' } },
 });

@@ -1,10 +1,10 @@
 {
-  "title": "Soul Cottage",
+  "title": "Soul",
   "location": "Highlands, North Carolina",
   "intro": "",
   "hero": {
     "image": "/src/assets/photos/e1ff942a10c69c76e317aba64e8ec849.jpg",
-    "alt": "Soul Cottage living room beneath a vaulted wood-beamed ceiling, with leather chairs, gray sofas, a hanging chair and windows into the trees"
+    "alt": "Soul living room beneath a vaulted wood-beamed ceiling, with leather chairs, gray sofas, a hanging chair and windows into the trees"
   },
   "portfolio": {
     "order": 4,
@@ -12,7 +12,7 @@
   },
   "slider": {
     "show": true,
-    "order": 6,
+    "order": 3,
     "image": "/src/assets/photos/e1ff942a10c69c76e317aba64e8ec849.jpg",
     "label": "Highlands, NC"
   },

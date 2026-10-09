@@ -7,11 +7,11 @@
     "alt": "The Cape living room, with a shiplap fireplace surround and a painting above the mantel"
   },
   "portfolio": {
-    "order": 2,
+    "order": 3,
     "image": "/src/assets/photos/ea64f498a99af4400771cded6814a319.jpg"
   },
   "slider": {
-    "show": true,
+    "show": false,
     "order": 4,
     "image": "/src/assets/photos/ce8366cf197056e49abf62c5ec32a244.jpg",
     "label": "Daniel Island"

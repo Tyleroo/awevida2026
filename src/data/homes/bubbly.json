@@ -11,7 +11,7 @@
     "image": "/src/assets/photos/6778366ed25d9822772f938db971aa3a.jpg"
   },
   "slider": {
-    "show": true,
+    "show": false,
     "order": 3,
     "image": "/src/assets/photos/6778366ed25d9822772f938db971aa3a.jpg",
     "label": ""

@@ -11,7 +11,7 @@
     "image": "/src/assets/photos/6a6c3540163ba7acf77f9f8c5e863e58.jpg"
   },
   "slider": {
-    "show": true,
+    "show": false,
     "order": 7,
     "image": "/src/assets/photos/6a6c3540163ba7acf77f9f8c5e863e58.jpg",
     "label": "Highlands, NC"
