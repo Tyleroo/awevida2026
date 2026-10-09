@@ -1,7 +1,7 @@
 {
   "title": "Bali",
   "location": "Daniel Island, South Carolina",
-  "intro": "",
+  "intro": "Test ",
   "hero": {
     "image": "/src/assets/photos/27f367a1335fce43801688c38d465ab1.jpg",
     "alt": "Bali living room with a beamed plank ceiling, a white brick fireplace and built-in shelving"
@@ -13,8 +13,7 @@
   "slider": {
     "show": true,
     "order": 5,
-    "image": "/src/assets/photos/27f367a1335fce43801688c38d465ab1.jpg",
-    "label": ""
+    "image": "/src/assets/photos/27f367a1335fce43801688c38d465ab1.jpg"
   },
   "rowGap": 20,
   "rows": [
