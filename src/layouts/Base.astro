@@ -24,8 +24,10 @@ interface Props {
   shareImage?: string;
   /** The home page footer also lists the social links. */
   footerSocialLinks?: boolean;
-  /** Bare pages (the 404) skip the header, photo strip and footer. */
+  /** Bare pages skip the header, photo strip and footer. */
   bare?: boolean;
+  /** Keep the page out of search engines (the 404). */
+  noindex?: boolean;
 }
 
 const {
@@ -35,6 +37,7 @@ const {
   shareImage = '68ff0be4a4c3bff997dbc604e2033e22',
   footerSocialLinks = false,
   bare = false,
+  noindex = false,
 } = Astro.props;
 
 const fullTitle = title ? `${title} | ${site.name}` : site.name;
@@ -49,7 +52,7 @@ const share = await getImage({ src: photo(shareImage), width: 1200, height: 630,
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    {bare ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />

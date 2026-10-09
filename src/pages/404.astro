@@ -1,16 +1,41 @@
 ---
-import { Image } from 'astro:assets';
+// Shown for any address that doesn't exist. (public/index.php is what makes the server use it.)
 import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 import Button from '../components/Button.astro';
-import logo from '../assets/logo.png';
+import { projects, projectUrl } from '../data/projects';
+
+// Four homes to offer instead.
+const picks = ['the-cove', 'dalton', 'the-cape', 'soul-cottage']
+  .map((slug) => projects.find((p) => p.slug === slug)!)
+  .filter(Boolean);
 ---
 
-<Base title="Page Not Found" bare>
-  <div class="notfound">
-    <a href="/" aria-label="AweVida home"><Image src={logo} alt="AweVida" width={342} class="notfound__logo" /></a>
-    <div class="notfound__rule"></div>
-    <h1>Page Not Found</h1>
-    <p>The page you were looking for isn't here. It may have moved when we refreshed the site.</p>
-    <Button href="/">Back to Home</Button>
-  </div>
+<Base title="Page Not Found" description="This page isn't here, but the homes are." noindex>
+  <section class="av-heroslider lost">
+    <div class="av-heroslider__stage">
+      <div class="av-heroslider__frame" data-active="true">
+        <Photo id="8ba7fc724b78c237f665425a0cf9567a" alt="Front doors standing open onto an entry hall" sizes="(max-width: 720px) 180vw, 100vw" class="av-fill" eager position="50% 60%" />
+      </div>
+      <div class="av-heroslider__bar">
+        <div class="av-heroslider__panel">
+          <p class="av-heroslider__caption"><b>404</b>Page not found</p>
+          <h1 class="av-heroslider__title">Wrong Door</h1>
+          <div><a class="av-heroslider__link" href="/">Back to Home<span aria-hidden="true"> →</span></a></div>
+        </div>
+      </div>
+    </div>
+    <p class="lost__note">The page you were looking for isn't behind this one. It may have moved, or the address may have a typo. The homes are all still open.</p>
+  </section>
+
+  <section class="lost-homes">
+    <div class="wrap">
+      <h2 class="lost-homes__title">Step inside one of these</h2>
+      <div class="av-grid">
+        {picks.map((p) => <ProjectCard href={projectUrl(p.slug)} title={p.title} location={p.location} image={p.card} />)}
+      </div>
+      <p class="lost-homes__more"><Button href="/portfolio/">See All the Homes</Button></p>
+    </div>
+  </section>
 </Base>

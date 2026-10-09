@@ -147,11 +147,30 @@
   .project-row .project-row__item { flex: none; width: 100%; }
 }
 
-/* ---------- 404 ---------- */
+/* ---------- 404 (Page Not Found) ---------- */
 
-.notfound { flex: 1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px var(--gutter); text-align: center; }
-.notfound__logo { height: 38px; width: auto; margin-bottom: 40px; }
-.notfound__rule { width: 48px; height: 1px; background: var(--taupe); margin-bottom: 40px; }
-.notfound h1 { margin: 0 0 20px; font-family: var(--font-serif); font-size: 48px; line-height: 56px; font-weight: 400; color: var(--ink); max-width: 620px; }
-.notfound p { margin: 0 0 32px; font-size: 17px; line-height: 27px; font-weight: 300; max-width: 480px; }
-@media (max-width: 720px) { .notfound h1 { font-size: 36px; line-height: 44px; } }
+/* Borrows the Home hero: a photograph with the sage block at the bottom, here a single still frame. */
+.lost .av-heroslider__stage { height: 620px; }
+.lost__note { max-width: 620px; margin: 0 auto; padding: 48px var(--gutter) 56px; text-align: center; font-size: 17px; line-height: 27px; font-weight: 300; color: var(--taupe); }
+
+.lost-homes { padding: 72px var(--gutter) 80px; background: var(--surface-alt); text-align: center; }
+.lost-homes__title { margin: 0 0 36px; font-family: var(--font-serif); font-size: 34px; line-height: 42px; font-weight: 400; color: var(--ink); }
+.lost-homes .av-grid { text-align: left; }
+.lost-homes__more { margin: 40px 0 0; }
+
+@media (max-width: 1000px) {
+  /* Four cards read better two by two than three and one. */
+  .lost-homes .av-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .lost .av-heroslider__stage { height: 520px; }
+  .lost .av-heroslider__bar { justify-content: flex-end; }
+}
+
+@media (max-width: 640px) {
+  .lost .av-heroslider__stage { height: 440px; }
+  .lost__note { padding: 32px var(--gutter) 40px; }
+  .lost-homes { padding: 48px var(--gutter) 56px; }
+  .lost-homes__title { font-size: 28px; line-height: 36px; margin-bottom: 24px; }
+}
