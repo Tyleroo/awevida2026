@@ -1,10 +1,8 @@
 {
-  "description": "Have a question or compliment? Get in touch with AweVida.",
   "heading": "Contact Us",
-  "lede": "Have a question or compliment? Let us know in the form below.",
+  "lede": "We would love to hear from you!",
   "photo": {
-    "image": "/src/assets/photos/b6a185759c6046995b6653396a29c652.jpg",
-    "alt": ""
+    "image": "/src/assets/photos/b6a185759c6046995b6653396a29c652.jpg"
   },
   "form": {
     "nameLabel": "Name",
@@ -17,8 +15,5 @@
     "sentMessage": "Thank you — your message has been sent.",
     "errorMessage": "Sorry, something went wrong and your message was not sent. Please try again in a moment."
   },
-  "details": {
-    "email": "",
-    "basedIn": ""
-  }
+  "description": "Have a question or compliment? Get in touch with AweVida."
 }
