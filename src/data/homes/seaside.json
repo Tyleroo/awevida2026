@@ -1,0 +1,91 @@
+{
+  "title": "Seaside",
+  "location": "Seabrook Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/seaside-main.jpg",
+    "alt": "Seaside kitchen and dining area, with nest-shaped pendants over a butcher-block table and a blue-gray door open to the screened porch"
+  },
+  "portfolio": {
+    "order": 10,
+    "image": "/src/assets/photos/seaside-main.jpg"
+  },
+  "slider": {
+    "show": false,
+    "order": 10,
+    "image": "/src/assets/photos/seaside-main.jpg",
+    "label": ""
+  },
+  "rowGap": 20,
+  "rows": [
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seaside-living-room.jpg",
+          "alt": "Living room with a blue sofa, linen armchairs and a fireplace under a beach photograph, sliding doors open to the porch"
+        },
+        {
+          "image": "/src/assets/photos/seaside-island-living.jpg",
+          "alt": "Butcher-block island in blue-gray looking across the living room to the screened porch"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seaside-kitchen.jpg",
+          "alt": "Kitchen with butcher-block counters, a hexagon tile backsplash and a pass-through window that lifts open to the porch"
+        },
+        {
+          "image": "/src/assets/photos/seaside-pendants.jpg",
+          "alt": "Nest-shaped pendants over the island, with a blue-gray door and a view to the marsh"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seaside-primary-bedroom.jpg",
+          "alt": "Primary bedroom with a woven rope bed, sailboat prints and sliding doors to a sun deck"
+        },
+        {
+          "image": "/src/assets/photos/seaside-blue-bedroom.jpg",
+          "alt": "Bedroom with a white spindle bed, blue striped bedding and woven baskets on the wall"
+        },
+        {
+          "image": "/src/assets/photos/seaside-kids-bedroom.jpg",
+          "alt": "Twin bedroom with built-in beds in coral and pink beneath a painted sunburst"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seaside-porch-seating.jpg",
+          "alt": "Screened porch with teak sofas around a reclaimed-wood coffee table, palms on every side"
+        },
+        {
+          "image": "/src/assets/photos/seaside-porch-seating-side.jpg",
+          "alt": "Screened porch seating in the morning sun, looking out over the palmettos"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seaside-dining-porch.jpg",
+          "alt": "Screened dining porch with a white table and benches overlooking the golf course and marsh"
+        },
+        {
+          "image": "/src/assets/photos/seaside-porch-dusk.jpg",
+          "alt": "The screened porch at dusk with the lights on"
+        }
+      ]
+    }
+  ]
+}
