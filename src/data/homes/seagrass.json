@@ -1,0 +1,143 @@
+{
+  "title": "Seagrass",
+  "location": "Seabrook Island, South Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/seagrass-main.jpg",
+    "alt": "Seagrass great room under a vaulted white plank ceiling, with a wicker sectional by the fireplace, a wood dining table beneath a beaded chandelier and a sunroom beyond"
+  },
+  "portfolio": {
+    "order": 4,
+    "image": "/src/assets/photos/seagrass-main.jpg"
+  },
+  "slider": {
+    "show": false,
+    "order": 11,
+    "image": "/src/assets/photos/seagrass-main.jpg",
+    "label": ""
+  },
+  "rowGap": 20,
+  "rows": [
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-living-room.jpg",
+          "alt": "Living room with a wicker sectional, a striped marble fireplace under a reclaimed-wood mantel and the sunroom beyond"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-living-dining.jpg",
+          "alt": "Looking from the sofa past the fireplace to the dining table and kitchen"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-dining.jpg",
+          "alt": "Dining area with a long wood table and a beaded chandelier, the kitchen pass-through and entry behind"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-breakfast-nook.jpg",
+          "alt": "Breakfast nook with a round white table and spindle-back wood chairs under a woven pendant"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-kitchen.jpg",
+          "alt": "Kitchen with teal cabinets, white counters, a hexagon tile wall and windows onto the palms"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-wet-bar.jpg",
+          "alt": "Wet bar niche with teal cabinets, wine storage and hexagon tile"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-mudroom.jpg",
+          "alt": "Entry mudroom with a built-in bench, woven baskets and a Beach House sign"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-mudroom-bench.jpg",
+          "alt": "Mudroom built-in with a cushioned bench, hooks and woven storage baskets under a Beach House sign"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-hallway.jpg",
+          "alt": "Hallway with a white plank ceiling and wide oak floors leading to the office"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-sunroom.jpg",
+          "alt": "Sunroom with a hanging rattan chair, a teak-root coffee table and windows onto the marsh"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-office.jpg",
+          "alt": "Office with a whitewashed desk and leather armchairs, looking through to the sunroom"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-office-desk.jpg",
+          "alt": "Office with a distressed white desk, built-in shelves and live oaks over the marsh outside"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-loft-bar.jpg",
+          "alt": "Upstairs bar with open wood shelves, penny tile and rope-knot lights, looking down to the kitchen"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-primary-bedroom.jpg",
+          "alt": "Primary bedroom under a vaulted beamed ceiling, with linen curtains and French doors to the office"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-primary-bedroom-doors.jpg",
+          "alt": "Primary bedroom seen from the bed, with shuttered windows and louvered closet doors"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-bathroom.jpg",
+          "alt": "Primary bath with a double vanity in soft gray, brass fixtures and rope-framed mirrors"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-bathtub.jpg",
+          "alt": "Wet room with a freestanding tub and brass shower against a wall of wood-look tile, under a skylight"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/seagrass-guest-bedroom.jpg",
+          "alt": "Guest bedroom with a gray spool bed, coral rug and louvered closet doors"
+        },
+        {
+          "image": "/src/assets/photos/seagrass-guest-bath.jpg",
+          "alt": "Guest bath with a blue-gray beadboard vanity, a scalloped white mirror and a fan-pattern mosaic floor"
+        }
+      ]
+    }
+  ]
+}
