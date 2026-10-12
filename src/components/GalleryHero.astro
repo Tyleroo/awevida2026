@@ -5,9 +5,15 @@ import Photo from './Photo.astro';
 interface Slide { id: string; alt: string; position?: string }
 interface Props { slides: Slide[]; interval?: number; eyebrow?: string; label?: string }
 const { slides, interval = 6500, eyebrow, label = 'Photographs' } = Astro.props;
+
+// The fade and the slow zoom are paced to the interval, so a quicker slideshow doesn't spend most of each photo mid-fade.
+const fade = Math.min(1600, Math.round(interval * 0.3));
+const zoom = interval + 500;
+const scale = interval < 4500 ? 1.05 : 1.08;
+const pace = `--gh-fade: ${fade}ms; --gh-zoom: ${zoom}ms; --gh-scale: ${scale}`;
 ---
 
-<section class="av-galleryhero" aria-roledescription="carousel" aria-label={label} data-galleryhero data-interval={interval}>
+<section class="av-galleryhero" aria-roledescription="carousel" aria-label={label} data-galleryhero data-interval={interval} style={pace}>
   <div class="av-galleryhero__stage">
     {slides.map((s, i) => (
       <div class="av-galleryhero__frame" data-active={i === 0 ? 'true' : 'false'} aria-hidden={i === 0 ? undefined : 'true'}>
