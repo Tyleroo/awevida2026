@@ -22,44 +22,35 @@
       "layout": "fit",
       "photos": [
         {
-          "image": "/src/assets/photos/bearly-time-fireplace.jpg",
-          "alt": "Two gray armchairs in front of a stacked-stone fireplace with a hewn wood mantel"
-        },
-        {
           "image": "/src/assets/photos/bearly-time-fireplace-sofa.jpg",
-          "alt": "Looking from the den through a reclaimed-wood frame to the stone fireplace"
-        }
-      ]
-    },
-    {
-      "layout": "fit",
-      "photos": [
+          "alt": "Stacked-stone fireplace with a hewn wood mantel and two gray armchairs, seen from the den"
+        },
         {
           "image": "/src/assets/photos/bearly-time-great-room.jpg",
           "alt": "Great room under a white beamed ceiling, from the den sofa past the dining table to the kitchen"
-        },
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
         {
           "image": "/src/assets/photos/bearly-time-dining-kitchen.jpg",
           "alt": "Dining table under an antler chandelier, with the gray kitchen beyond"
-        }
-      ]
-    },
-    {
-      "layout": "fit",
-      "photos": [
+        },
         {
           "image": "/src/assets/photos/bearly-time-den.jpg",
           "alt": "Den with a striped linen sectional, a jute rug and a sliding door to the deck"
-        },
-        {
-          "image": "/src/assets/photos/bearly-time-den-hall.jpg",
-          "alt": "Den framed in reclaimed wood, with the hallway and front door to the left"
         }
       ]
     },
     {
       "layout": "fit",
       "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-den-hall.jpg",
+          "alt": "Den framed in reclaimed wood, with the hallway and front door to the left"
+        },
         {
           "image": "/src/assets/photos/bearly-time-entry-console.jpg",
           "alt": "Entry with a distressed console table, a reclaimed-wood mirror and woven baskets"
@@ -123,10 +114,6 @@
         {
           "image": "/src/assets/photos/bearly-time-tub-curtain.jpg",
           "alt": "Clawfoot tub behind white fringed curtains, with a window to the trees"
-        },
-        {
-          "image": "/src/assets/photos/bearly-time-bath-signs.jpg",
-          "alt": "Remember to Flush and Wash Your Hands signs on a shiplap bathroom wall"
         }
       ]
     },
