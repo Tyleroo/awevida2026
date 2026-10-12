@@ -1,0 +1,151 @@
+{
+  "title": "Bearly Time",
+  "location": "Highlands, North Carolina",
+  "intro": "",
+  "hero": {
+    "image": "/src/assets/photos/bearly-time-main.jpg",
+    "alt": "Bearly Time dining area with an antler chandelier over a whitewashed table, a stacked-stone fireplace and vintage snowshoes on the shiplap wall"
+  },
+  "portfolio": {
+    "order": 12,
+    "image": "/src/assets/photos/bearly-time-main.jpg"
+  },
+  "slider": {
+    "show": false,
+    "order": 12,
+    "image": "/src/assets/photos/bearly-time-main.jpg",
+    "label": ""
+  },
+  "rowGap": 20,
+  "rows": [
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-fireplace.jpg",
+          "alt": "Two gray armchairs in front of a stacked-stone fireplace with a hewn wood mantel"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-fireplace-sofa.jpg",
+          "alt": "Looking from the den through a reclaimed-wood frame to the stone fireplace"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-great-room.jpg",
+          "alt": "Great room under a white beamed ceiling, from the den sofa past the dining table to the kitchen"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-dining-kitchen.jpg",
+          "alt": "Dining table under an antler chandelier, with the gray kitchen beyond"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-den.jpg",
+          "alt": "Den with a striped linen sectional, a jute rug and a sliding door to the deck"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-den-hall.jpg",
+          "alt": "Den framed in reclaimed wood, with the hallway and front door to the left"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-entry-console.jpg",
+          "alt": "Entry with a distressed console table, a reclaimed-wood mirror and woven baskets"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-hallway.jpg",
+          "alt": "Entry looking down the shiplap hallway, with antlers and lantern sconces on the wall"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-primary-bedroom.jpg",
+          "alt": "Primary bedroom with a reclaimed-wood bed, gray bedding and floor-length white curtains"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-primary-bedroom-doors.jpg",
+          "alt": "Primary bedroom with reclaimed-wood barn doors to the closet and bath"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-creek-view.jpg",
+          "alt": "View from the primary bedroom to the creek and trees behind the house"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-primary-vanity.jpg",
+          "alt": "Primary bath seen through the doorway, with a gray double vanity"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-primary-bath.jpg",
+          "alt": "Primary bath with a gray double vanity and a marble-tiled glass shower"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-bunk-room.jpg",
+          "alt": "Bunk room with built-in timber bunk beds and plaid bedding"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-bunk-bath.jpg",
+          "alt": "Bunk room bath with a gray vanity, white tile shower and pebble floor"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-hall-bath.jpg",
+          "alt": "Hall bath with twin vessel sinks on a reclaimed-wood vanity and a gilt-framed mirror"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-tub-curtain.jpg",
+          "alt": "Clawfoot tub behind white fringed curtains, with a window to the trees"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-bath-signs.jpg",
+          "alt": "Remember to Flush and Wash Your Hands signs on a shiplap bathroom wall"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/bearly-time-hammock-creek.jpg",
+          "alt": "Hammock strung between trees beside the creek, with the house behind"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-hammock.jpg",
+          "alt": "The gray cottage and its porch seen across a rope hammock"
+        },
+        {
+          "image": "/src/assets/photos/bearly-time-fire-pit.jpg",
+          "alt": "Stone-ringed fire pit with four Adirondack chairs beside the creek"
+        }
+      ]
+    }
+  ]
+}
