@@ -27,10 +27,6 @@
         {
           "image": "/src/assets/photos/eaf19457732b00a383f07d6117af542f.jpg",
           "alt": "Covered porch with a white sectional and round side tables"
-        },
-        {
-          "image": "/src/assets/photos/1fbe81944d5a438579793183297a5a7a.jpg",
-          "alt": "Covered porch with a reclaimed-wood dining table and woven pendant lanterns"
         }
       ]
     },
@@ -38,16 +34,16 @@
       "layout": "fit",
       "photos": [
         {
+          "image": "/src/assets/photos/1fbe81944d5a438579793183297a5a7a.jpg",
+          "alt": "Covered porch with a reclaimed-wood dining table and woven pendant lanterns"
+        },
+        {
           "image": "/src/assets/photos/8249b2ecb7598afedbf0f76da10e8f43.jpg",
           "alt": "Garden corner with banana-leaf plants, a driftwood bench and stepping stones"
         },
         {
           "image": "/src/assets/photos/8fe9dac43d25835e920b664a26f6fce5.jpg",
           "alt": "Sunken outdoor shower surrounded by tropical plants"
-        },
-        {
-          "image": "/src/assets/photos/e173f3c0b0f640c49290c86e0def1aa5.jpg",
-          "alt": "Outdoor shower with marble tile and a tropical garden view"
         }
       ]
     },
@@ -61,48 +57,6 @@
         {
           "image": "/src/assets/photos/01c24676b247d912256921ab7dbff939.jpg",
           "alt": "Playroom with a pink rug, a white sectional and an arched dollhouse door"
-        },
-        {
-          "image": "/src/assets/photos/ca1b12ceb092774fcfd63c7a8515332d.jpg",
-          "alt": "Entry stairwell with a skylight, a white banister and a wooden bench"
-        }
-      ]
-    },
-    {
-      "layout": "fit",
-      "photos": [
-        {
-          "image": "/src/assets/photos/acf6f256576be14fa8b80204e83e36dc.jpg",
-          "alt": "Hallway with lantern pendants, a patterned runner and leaf-print wallpaper"
-        },
-        {
-          "image": "/src/assets/photos/d080299b4ce43484b94f7a0a914d11e7.jpg",
-          "alt": "Desk nook with herringbone wallpaper, a blush chair and tulips"
-        },
-        {
-          "image": "/src/assets/photos/7d60d26c92484f6d3b876200596fd807.jpg",
-          "alt": "Blue sliding door opening to a closet with a patterned tile floor"
-        }
-      ]
-    },
-    {
-      "layout": "fit",
-      "photos": [
-        {
-          "image": "/src/assets/photos/01281b130038a02b9042ec574308eb38.jpg",
-          "alt": "Blue-painted room with a bench, a beaded chandelier and wall mirrors"
-        },
-        {
-          "image": "/src/assets/photos/ada87703af95f2af2ac43d9b79a6bc9b.jpg",
-          "alt": "Laundry room with framed crab watercolors and open shelving"
-        },
-        {
-          "image": "/src/assets/photos/6191af87198b17888a75fc35f020aa9f.jpg",
-          "alt": "Blue-painted hallway with an arched built-in nook"
-        },
-        {
-          "image": "/src/assets/photos/a3624372efd31e0c4038e5cab25e8811.jpg",
-          "alt": "Powder room with a sage vanity, a gilded mirror and palm-leaf wallpaper"
         }
       ]
     },
@@ -120,6 +74,40 @@
         {
           "image": "/src/assets/photos/5dfad9134035fda8b2ca3f401e19d5b7.jpg",
           "alt": "Kitchen island with blush-cushioned stools and open wood shelving"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/ca1b12ceb092774fcfd63c7a8515332d.jpg",
+          "alt": "Entry stairwell with a skylight, a white banister and a wooden bench"
+        },
+        {
+          "image": "/src/assets/photos/acf6f256576be14fa8b80204e83e36dc.jpg",
+          "alt": "Hallway with lantern pendants, a patterned runner and leaf-print wallpaper"
+        },
+        {
+          "image": "/src/assets/photos/d080299b4ce43484b94f7a0a914d11e7.jpg",
+          "alt": "Desk nook with herringbone wallpaper, a blush chair and tulips"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/01281b130038a02b9042ec574308eb38.jpg",
+          "alt": "Blue-painted room with a bench, a beaded chandelier and wall mirrors"
+        },
+        {
+          "image": "/src/assets/photos/6191af87198b17888a75fc35f020aa9f.jpg",
+          "alt": "Blue-painted hallway with an arched built-in nook"
+        },
+        {
+          "image": "/src/assets/photos/7d60d26c92484f6d3b876200596fd807.jpg",
+          "alt": "Blue sliding door opening to a closet with a patterned tile floor"
         }
       ]
     },
@@ -154,6 +142,23 @@
         {
           "image": "/src/assets/photos/7368731a426947b1035aa337b7777497.jpg",
           "alt": "Attic daybed nook beneath a round window"
+        }
+      ]
+    },
+    {
+      "layout": "fit",
+      "photos": [
+        {
+          "image": "/src/assets/photos/a3624372efd31e0c4038e5cab25e8811.jpg",
+          "alt": "Powder room with a sage vanity, a gilded mirror and palm-leaf wallpaper"
+        },
+        {
+          "image": "/src/assets/photos/e173f3c0b0f640c49290c86e0def1aa5.jpg",
+          "alt": "Marble-tiled shower with brass fixtures and a window onto the tropical garden"
+        },
+        {
+          "image": "/src/assets/photos/ada87703af95f2af2ac43d9b79a6bc9b.jpg",
+          "alt": "Laundry room with framed crab watercolors and open shelving"
         }
       ]
     }
